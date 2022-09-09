@@ -1,0 +1,344 @@
+\documentclass[11pt]{article}
+\usepackage{datetime}
+\usepackage{color,array,graphics}
+\usepackage{enumerate}
+\usepackage[pdftex, colorlinks, linkcolor=red,citecolor=red,urlcolor=blue]{hyperref}
+\usepackage{ulem}
+
+\setlength{\parindent}{0cm}
+
+\setlength{\parskip}{0.3cm plus4mm minus3mm}
+
+\textwidth  6.5in
+\oddsidemargin +0.0in
+\evensidemargin +0.0in
+\textheight 9.0in
+\topmargin -0.5in
+
+\usepackage{upquote,textcomp}
+\usepackage{amssymb,amsmath,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+
+\def\OR{\vee}
+\def\AND{\wedge}
+\def\imp{\rightarrow}
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\N}{\mathbin}{AMSb}{"4E}
+\DeclareMathSymbol{\Z}{\mathbin}{AMSb}{"5A}
+\DeclareMathSymbol{\R}{\mathbin}{AMSb}{"52}
+\DeclareMathSymbol{\Q}{\mathbin}{AMSb}{"51}
+\DeclareMathSymbol{\I}{\mathbin}{AMSb}{"49}
+\DeclareMathSymbol{\C}{\mathbin}{AMSb}{"43}
+
+\begin{document}
+\thispagestyle{empty}   %% skips page number on the first page
+
+\begin{center}
+\large
+\textbf{CSCI 2200 --- Foundations of Computer Science (FoCS) \\
+Homework 1 (document version 1.0)}
+\end{center}
+
+\section*{Overview}
+\begin{itemize}
+\item This homework is due by 11:59PM on Thursday, September~15
+\item You may work on this homework in a group of no more than four students;
+  unlike recitation problem sets,
+  \textbf{your teammates may be in any section}
+\item You may use at most \textbf{two} late days on this assignment
+\item Please start this homework early and ask questions during
+  office hours and at your September~14 recitation section;
+  also ask (and answer) questions on the Discussion Forum 
+\item Please be concise in your answers;
+  even if your solution is correct, if it is not well-presented,
+  you may still lose points
+\item You can type or hand-write (or both) your solutions
+  to the required graded problems below;
+  \textbf{all work must be organized in one PDF that lists
+  all teammate names}
+\item You are strongly encouraged to use LaTeX, in particular for
+  mathematical symbols;
+  see references in Course Materials
+\item \textbf{EARNING LATE DAYS:}
+  for each homework that you complete using LaTeX
+  (including any tables, graphs, etc., i.e.,~no hand-written anything),
+  you earn one additional late day;
+  you can draw graphs and other diagrams
+  in another application and include them as image files
+\end{itemize}
+
+\vspace{0.2in}
+
+\begin{center}
+\includegraphics[scale=0.5]{math-bitmoji.png}
+\end{center}
+
+\newpage
+\section*{Warm-up exercises}
+The problems below are good practice problems to work on.
+Do not submit these as part of your homework submission.
+\textbf{These are ungraded problems.}
+
+\begin{multicols}{2}
+\begin{itemize}
+
+\item \textbf{Problem 1.26}
+
+\item \textbf{Problem 2.19}
+
+\item \textbf{Problem 3.4}
+
+\item \textbf{Problem 3.13}
+
+\item \textbf{Problem 3.14}
+
+\item \textbf{Problem 3.22}
+
+\item \textbf{Problem 3.24}
+
+\item \textbf{Problem 3.43}
+
+\item \textbf{Problem 3.47}
+
+\end{itemize}
+\end{multicols}
+
+\section*{Graded problems}
+The problems below are required and will be graded.
+\begin{itemize}
+
+\item \textbf{Problem 2.16 (Cartesian Product).}
+
+\item \textbf{Problem 2.29}
+
+\item \textbf{Problem 3.20 (DNF). Parts (a) and (b) only.}
+
+\item \textbf{Problem 3.23}
+
+\item \textbf{Problem 3.31}
+
+\item \textbf{Problem 3.44}
+
+\item \textbf{Problem 3.56}
+
+\item \textbf{Problem 4.7. Part (a) only.}
+
+\end{itemize}
+
+
+All of the above problems (both graded an ungraded)
+are transcribed in the pages that follow.
+
+Graded problems are noted with an asterisk~(*).
+
+If any typos exist below, please use the textbook description.
+
+\newpage
+\begin{itemize}
+
+\item \textbf{Problem 1.26.}
+  Two players alternately pick numbers without replacement
+  from the set $\{1,2,3,\ldots,9\}$.
+  The first player to obtain three numbers that sum to 15 wins.
+  What is your strategy?
+
+\vspace{0.1in}
+
+\item \textbf{*Problem 2.16 (Cartesian Product).}
+  Let $A=\{1,2,3\}$ and $B=\{a,b,c,d\}$.
+  The Cartesian product $A\times B$ is the set of pairs formed
+  from elements of A and elements of B,
+  $$A\times B = \{(a,b)\ |\ a\in A,\ b\in B\}$$
+
+  \begin{enumerate}[(a)]
+  \item List the elements in $A\times B$.
+    What is $|A\times B|$?
+  \item List the elements in $B\times A$.
+    What is $|B\times A|$?
+  \item List the elements in $A\times A=A^2$.
+    What is $|A\times A|$?
+  \item List the elements in $B\times B=B^2$.
+    What is $|B\times B|$?
+  \end{enumerate}
+
+  Generalize the definition of $A\times B$ to a Cartesian product
+  of three sets $A\times B\times C$.
+
+\vspace{0.1in}
+
+\item \textbf{Problem 2.19.}
+  How many binary sequences are of length $1,2,3,4,5$?
+  Guess the pattern.
+
+\vspace{0.1in}
+
+\item \textbf{*Problem 2.29.}
+  Mimic the method we used to prove $\sqrt{2}$ is irrational and
+  prove $\sqrt{3}$ is irrational.
+  Now use the same method to try and prove $\sqrt{9}$ is irrational.
+  What goes wrong?
+
+\vspace{0.1in}
+
+\item \textbf{Problem 3.4.}
+  Define the propositions $p=$~``Kilam is a CS major''
+  and $q=$~``Kilam is a hockey player''.
+  Use the connectors $\OR$, $\AND$, $\imp$ to formulate these claims.
+  \begin{enumerate}[(a)]
+  \item Kilam is a hockey player and CS major.
+  \item Kilam either plays hockey or is a CS major.
+  \item Kilam plays hockey, but he is not a CS major.
+  \item Kilam is neither a hockey player nor a CS major.
+  \item Kilam is a CS major or a hockey player, not both.
+  \item Kilam is not a hockey player but is a CS major.
+  \end{enumerate}
+
+\vspace{0.1in}
+
+\item \textbf{Problem 3.13.}
+  If it rains on a day, it rains the next day.
+  Today it didn't rain.
+  On which days must there be no rain? \\
+  (a) Tomorrow.
+  (b) All future days.
+  (c) Yesterday.
+  (d) All previous days.
+
+\vspace{0.1in}
+
+\item \textbf{Problem 3.14.}
+  For $p=$~``You're sick'', $q=$~``You miss the final'',
+  $r=$~``You pass FOCS'', translate into English:
+  \begin{enumerate}[(a)]
+  \item $q\imp\neg r$.
+  \item $(p\imp\neg r)\OR(q\imp\neg r)$.
+  \item $(p\AND q)\OR(\neg q\AND r)$.
+  \end{enumerate}
+
+\newpage
+
+\item \textbf{*Problem 3.20 (DNF). Parts (a) and (b) only.}
+  Use $\neg$, $\AND$, $\OR$ to give compound propositions with these truth-tables.
+
+  [Hint: You need only consider the rows which are \textsc{t}
+  and use \textsc{or} of \textsc{and}'s.]
+  \begin{multicols}{2}
+  \begin{enumerate}[(a)]
+  \item
+    \begin{tabular}{cc|c}
+      $q$&$r$&\\
+      \hline
+      \textsc{t}&\textsc{t}&\textsc{f}\\
+      \textsc{t}&\textsc{f}&\textsc{t}\\
+      \textsc{f}&\textsc{t}&\textsc{f}\\
+      \textsc{f}&\textsc{f}&\textsc{f}\\
+    \end{tabular}
+  \item
+    \begin{tabular}{cc|c}
+      $q$&$r$&\\
+      \hline
+      \textsc{t}&\textsc{t}&\textsc{f}\\
+      \textsc{t}&\textsc{f}&\textsc{t}\\
+      \textsc{f}&\textsc{t}&\textsc{f}\\
+      \textsc{f}&\textsc{f}&\textsc{t}\\
+    \end{tabular}
+  \end{enumerate}
+  \end{multicols}
+
+  (\textsc{and-or-not} formulas use only $\neg$, $\AND$, $\OR$.
+   Any truth-table can be realized by an \textsc{and-or-not} formula.
+   Even more, one can construct an \textsc{or} or \textsc{and}'s,
+   the \textit{disjunctive normal form (DNF)}.)
+
+\vspace{0.1in}
+
+\item \textbf{Problem 3.22.}
+  How many rows are in the truth table of $\neg(p\OR q)\AND\neg r$?
+  Give the truth table.
+
+\vspace{0.1in}
+
+\item \textbf{*Problem 3.23.}
+  \begin{enumerate}[(a)]
+  \item Give the truth-table for these compound propositions.
+    $$p\AND\neg p;\ \ \ p\OR\neg p;\ \ \ p\imp(p\OR q);\ \ \ ((p\imp q)\AND(\neg q))\imp\neg p$$
+
+  \item How many rows are in the truth-table of the proposition
+    $(p\OR q)\imp(r\imp s)$?
+
+  \item Show that $(p\imp q)\OR p$ is ALWAYS true.
+    This is called a tautology.
+  \end{enumerate}
+
+\vspace{0.1in}
+
+\item \textbf{Problem 3.24.}
+  Let $q\imp p$ be \textsc{f} and $q\imp r$ be \textsc{t}.
+  Answer \textsc{t}/\textsc{f}: (a)~$p\OR q$ (b)~$p\imp q$ (c)~$p\AND q\AND r$.
+
+\vspace{0.1in}
+
+\item \textbf{*Problem 3.31.}
+  Use truth tables to determine the logical equivalence of the compound statements.
+  \begin{multicols}{2}
+  \begin{enumerate}[(a)]
+  \item $(p\imp q)\imp r$ and $p\imp (q\imp r)$
+  \item $(p\AND\neg q)\OR q$ and $p\OR q$
+  \end{enumerate}
+  \end{multicols}
+
+\vspace{0.1in}
+
+\item \textbf{Problem 3.43.}
+  For $x\in\{1,2,3,4,5\}$ and $y\in\{1,2,3\}$,
+  determine \textsc{t}/\textsc{f} with short justifications.
+  \begin{enumerate}[(a)]
+  \item $\exists x:x+3=10$
+  \item $\forall y:y+3\le7$
+  \item $\exists x:(\forall y:x^2<y+1)$
+  \item $\forall x:(\exists y:x^2+y^2<12)$
+  \end{enumerate}
+
+\vspace{0.1in}
+
+\item \textbf{*Problem 3.44.}
+  For $x,y\in\Z$, determine \textsc{t}/\textsc{f} with short justifications.
+  \begin{enumerate}[(a)]
+  \item $\forall x:(\exists y:x=5/y)$
+  \item $\forall x:(\exists y:y^4-x<16)$
+  \item $\forall x:(\exists y:\log_2 x\ne y^3)$
+  \end{enumerate}
+
+\vspace{0.1in}
+
+\item \textbf{Problem 3.47.}
+  Use quantifiers to precisely formulate the associative laws
+  for multiplication and addition and the distributive law
+  for multiplication over addition.
+
+\vspace{0.1in}
+
+\item \textbf{*Problem 3.56.}
+  In which (if any) of the domains $\N,\Z,\Q,\R$ are these claims \textsc{t}?
+  ($x$ and $y$ can have different domains.)
+  \begin{enumerate}[(a)]
+  \item $\exists x:x^2=4$
+  \item $\exists x:x^2=2$
+  \item $\forall x: (\exists y:x^2=y)$
+  \item $\forall y: (\exists x:x^2=y)$
+  \end{enumerate}
+
+\vspace{0.1in}
+
+\item \textbf{*Problem 4.7. Part (a) only.}
+  Give direct proofs:
+  \begin{enumerate}[(a)]
+  \item $x,y\in\Q\imp xy\in\Q$.
+  \end{enumerate}
+
+\end{itemize}
+
+\end{document}
