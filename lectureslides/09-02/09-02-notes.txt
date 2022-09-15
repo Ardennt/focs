@@ -1,0 +1,11 @@
+[09/02/2022]
+
+
+ A < B   A is a proper subset of B
+   every element of A is in B and at least 1 element of B is not in A
+
+
+
+Proofs are a rigorous way of convincing you of something precise
+
+
