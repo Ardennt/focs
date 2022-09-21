@@ -6,14 +6,15 @@
 
 \begin{document}
     \begin{enumerate}
+
         \item assume n is an integer, give direct and contraposition proofs
         \begin{enumerate}
-            \item ($n^3 + 5$ is odd) $=>$ (n is even)
+            \item ($n^3 + 5$ is odd) $ \rightarrow $ (n is even)
             \begin{enumerate}
                 \item direct proof
                 \begin{itemize}
                     \item $n^3 + 5$ is odd, $n^3 + 5 = 2k + 1$, $n^3 = 2k -4$
-                    \item $n = \sqrt[3]{2k-4}$
+                    \item $n = \sqrt[3]{2(k-2)}$
                     \item a cube root of an even number is always even by definition, statement claimed in p is true
                 \end{itemize}
                 \item contraposition proof
@@ -24,11 +25,11 @@
                     \item we have shown that p is even when n is odd, the statement claimed is true 
                 \end{itemize}
             \end{enumerate}
-            \item (3 does not divide $n$) $=>$ (3 divides $n^2 + 2$)
+            \item (3 does not divide $n$) $ \rightarrow $ (3 divides $n^2 + 2$)
             \begin{enumerate}
                 \item direct proof
                 \begin{itemize}
-                    \item if 3 does not divide n, then $n \neq 3k$
+                    \item if 3 does not divide n, then $n = 3k + 1$
                     \item assuming p is true, 3 divides $n^2 + 2$, so $n^2 + 2 = 3k$
                     \item $n^2 = 3k-2$, then $n = \sqrt{3k-2}$
                     \item plugging in $n = 3k$, we get $n = \sqrt{n-2}$
@@ -43,6 +44,7 @@
                 \end{itemize}
             \end{enumerate}
         \end{enumerate}
+        
         \item prove by contradiction
         \begin{enumerate}
             \item $(x, y) \in \mathbb{Z}^2 \rightarrow x^2 - 4y -3 \neq 0$
@@ -56,20 +58,32 @@
                 \item the statement is true due to proof by contradiction
             \end{itemize}
         \end{enumerate}
+        
         \item prove these if and only if, prove two implications
         \begin{enumerate}
             \item prove: 4 divides $n \in \mathbb{Z}$ IF AND ONLY IF $n = 1 + (-1)^k(2k-1)$ for $k \in \mathbb{N}$. (Try $n < 0$, $n = 0$, $n > 0$; $k$ is even/odd.)
             \begin{enumerate}
                 \item p $\rightarrow$ q
                 \begin{itemize}
-                    \item direct proof: $4k = n \rightarrow n = 1 + (-1)^k(2k-1)$ 
+                    \item direct proof: $4w = n \rightarrow n = 1 + (-1)^k(2k-1)$ 
+                    \item from plugging in, we get $4w = 1 + (-1)^k(2k-1)$
+                    \item if $k$ is even, then $k = 2w$, from plugging in, we get $4w = 1 + (2(2w) - 1)$, equal to $4w = 4w$, from above, we stated that $4$ divides $n$, therefore $n = 4w$
+                    \item if $k$ is odd, then $k = 2w + 1$, from plugging in, we get $4w = 1 + (-1)(2(2w+1)-1)$, equal to $4w \neq 1-4w$, then $n = 1-4w$, which does not divide 4
+                    \item if $k$ = 0, then it becomes $4w = 0$, then $n = 0$ as well, which is divisible by $4$
+                    \item plug in 4w for n in the other equation, then do the three cases where k is even or odd or equal to 0
                 \end{itemize}
                 \item q $\rightarrow$ p
                 \begin{itemize}
-                    \item hi
+                    \item direct proof
+                    \item assuming that p is true
+                    \item assuming $k = 2w$ for even cases, $k = 2w+1$ for odd cases, $k = 0$ for 0 cases
+                    \item even cases of k, $n = 1 + (2(2w) - 1) = 4w$, then $n = 4w$, it does divide by 4
+                    \item odd cases of k $n = 1 + (-1)(2(2w+1) -1)$, then $n = 1-4w$, it does not divide by 4
+                    \item 0 case of k $n = 0$, it is divisible by 4
                 \end{itemize}
             \end{enumerate}
         \end{enumerate}
+        
         \item determine the type of proof and prove
         \begin{enumerate}
             \item If $n$ is odd, then $n^2 - 1$ is divisible by 8.
@@ -82,5 +96,6 @@
                 \item by direct proof, the statement is false
             \end{itemize}
         \end{enumerate}
+        
     \end{enumerate}
 \end{document}
