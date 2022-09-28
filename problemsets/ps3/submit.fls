@@ -199,11 +199,14 @@ INPUT D:\HDD Apps\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\HDD Apps\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\HDD Apps\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT D:\HDD Apps\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT D:\HDD Apps\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 OUTPUT submit.pdf
 INPUT C:\Users\ardennt\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT submit.aux
 INPUT C:\Users\ardennt\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\ardennt\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
+INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
@@ -218,3 +221,5 @@ INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb

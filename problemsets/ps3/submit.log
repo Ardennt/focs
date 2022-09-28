@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.15)  26 SEP 2022 22:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.15)  28 SEP 2022 00:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -184,23 +184,23 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/ardennt/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (submit.aux) )
+{C:/Users/ardennt/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] (submit.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 5 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2357 strings out of 475389
- 34912 string characters out of 2789154
+ 2359 strings out of 475389
+ 34936 string characters out of 2789154
  387793 words of memory out of 3000000
- 23750 multiletter control sequences out of 15000+600000
- 474248 words of font info for 47 fonts, out of 8000000 for 9000
+ 23751 multiletter control sequences out of 15000+600000
+ 474556 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,5n,62p,274b,518s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\ardennt\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on submit.pdf (1 page, 76900 bytes).
+ 55i,5n,62p,274b,575s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\ardennt\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on submit.pdf (2 pages, 97193 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
