@@ -48,7 +48,13 @@
         \end{enumerate}
         \item Prove that for $n \geq 1$, there is $k \geq 0$ and $\ell$ odd such that $n = 2^k\ell$
         \begin{itemize}
-            \item help
+            \item BASE CASE: $n = 1$ and $k = 0$, therefore plugging into $Q(n) = P(n) = 2^k\ell$ becomes $1 = 2^0\ell$
+            \item in this case, $\ell = 1$, which makes it odd, base case passed
+            \item INDUCTION STEP: $n = n+1$ and $k = k + 1$
+            \item $n + 1 = 2 ^ {k+1} \ell \rightarrow$ plug in $n$ for $2^k\ell$
+            \item $2^k\ell + 1 = 2^{k+1}\ell$, knowing that $\ell$ will be odd, we can substitute it for $2w + 1$
+            \item $2^k(2w+1) + 1 = 2^{k+1}\ell$
+            \item $2^k2w+2^k+1 = 2^k\times2\times\ell$
         \end{itemize}
     \end{enumerate}
 \end{document}
