@@ -37,7 +37,47 @@
         \begin{enumerate}[(k)]
             \item contrapositive claim: if $n$ is a perfect square, then 3 does not divide $n-2$
             \begin{itemize}
-                \item 
+                \item Assume n is a perfect square, then $n = k^2$
+                \item Then, we can say $3w = n-2$ and $3w = k^2 -2$
+                \item Split into odd and even cases:
+                \item Case 1: $k = 2q$, even
+                \begin{align*}
+                    3w &= (2q)^2 - 2\\
+                    &= 4q^2-2\\
+                    w&=\frac{4q^2}{3} - \frac{2}{3}\\
+                    &\text{q is divisible by 3}\\
+                    q &= 3j\\
+                    w &= \frac{4 \times 3j \times 3j}{3} - \frac{2}{3}\\
+                    &= 4j \times 3j - \frac{2}{3}\\
+                    w &= 12j - \frac{2}{3}\\
+                    \text{q is not divisible by 3}\\
+                    q &= 3j + 1\\
+                    w &= \frac{4 \times (3j+1) \times (3j+1)}{3} - \frac{2}{3}\\
+                    w &= 12j^2 + 8j + \frac{2}{3}\\
+                    \text{q is not divisible by 3 pt 2}\\
+                    q &= 3j + 2\\
+                    w &= 12j^2 + 16j - \frac{1}{3}
+                \end{align*}
+                \item Case 2: $k = 2q + 1$, odd
+                \begin{align*}
+                    3w &= (2q+1)^2 - 2\\
+                    3w &= 4q^2 + 4q - 1\\
+                    &\text{q is divisible by 3}\\
+                    q &= 3j\\
+                    w &= \frac{4q^2}{3} + \frac{4q}{3} - \frac{1}{3}\\
+                    w&= 12j^2 + 12j - \frac{1}{3}\\
+                    &\text{q is not divisible by 3}\\
+                    q &= 3j + 1\\
+                    w&= \frac{4(9j^2 + 6j + 1) + 12j + 3}{3}\\
+                    w&= 12j^2 + 12j + \frac{7}{3}\\
+                    &\text{q is not divisible by 3 pt 2}\\
+                    q &= 3j + 2\\
+                    w&= \frac{4(3j+2)^2 + 4(3j+2) - 1}{3}\\
+                    w &= 12j^2 + 28j + \frac{23}{3}
+                \end{align*}
+                \begin{center}
+                    For all the following cases, for any $j \in \mathbb{N}$, w will never be a $\mathbb{N}$ due to the fraction, therefore, the following statement is true due to contraposition $\blacksquare$
+                \end{center}
             \end{itemize}
         \end{enumerate}
         \begin{enumerate}[(l)]
