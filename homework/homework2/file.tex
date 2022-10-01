@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{amsmath, amssymb, setspace, enumerate}
+\doublespace
+
+\begin{document}
+    \begin{itemize}
+        \item \textbf{Problem 3.59}
+        \begin{enumerate}
+            \item addition: a, b, c, d
+            \item subtraction: b, c, d
+            \item multiplication: a, b, c, d
+            \item division: c, d
+            \item exponential: a
+        \end{enumerate}
+
+        \item \textbf{Problem 4.7}
+        \begin{enumerate}
+            \item Assume $n \in \mathbb{Z}$ is true
+            \item We then divide it into two cases, where $n$ is odd and $n$ is even
+            \item Case 1: $n = 2k + 1$, $n$ is odd $\rightarrow n^2 + n$ is even
+            \begin{itemize}
+                \item then $(2k+1)^2 + (2k+1) = 4k^2 + 4k + 1+ 2k + 1$
+                \item then, $4k^2 + 4k + 2k + 2$
+                \item then, $2(2k^2 + 2k + k + 1)$
+                \item We prove by direct proof that if $n$ is odd, then $n^2+n$ is even $\blacksquare$
+            \end{itemize}
+            \item Case 2: $n = 2k$ is even $\rightarrow n^2 + n$ is even
+            \begin{itemize}
+                \item subbing in, we get $(2k)^2 + 2k = 4k^2 + 2k$, which is $2(2k^2 + k)$
+                \item We prove by direct proof that when $n$ is even, $n^2 + n$ is even $\blacksquare$
+            \end{itemize}
+            \item We only have two cases of what $n$ could be, which is odd or even, by direct proof, we prove that $n \in \mathbb{Z} \rightarrow n^2 + n$ is true for any positive or negative integer
+        \end{enumerate}
+        
+        \item \textbf{Problem 4.10}
+        \begin{enumerate}[(k)]
+            \item contrapositive claim: if $n$ is a perfect square, then 3 does not divide $n-2$
+            \begin{itemize}
+                \item 
+            \end{itemize}
+        \end{enumerate}
+        \begin{enumerate}[(l)]
+            \item contrapositive claim: if $p^2+1$ is prime, then for $p > 2$ is composite
+            \begin{itemize}
+                \item Any number $p$ can be written as $k+2$ or $k+3$
+                \item if $k$ is even, $k + 2$ is even, $k+3$ will be even when $k$ is odd
+                \item Case 1: $k$ is even, $k = 2w$ for some integer $w$
+                \begin{align*}
+                    p^2 + 1 \rightarrow (k+2)^2 + 1 &= (2w+2)^2 + 1\\
+                    &=4w^2 + 4w + 4w + 4 + 1\\
+                    &=4(w^2 + 2w + 1) + 1
+                \end{align*}
+                \begin{center}
+                    \textbf{for any value $w$, it will always be a prime number $\blacksquare$}
+                \end{center}
+                \item Case 2: $k$ is odd, $k = 2w + 1$
+                \begin{align*}
+                    p^2 + 1 \rightarrow (k+3)^2 + 1 &= (2w+1+3)2 + 1\\
+                    &=(2w+4)^2 + 1\\
+                    &=4w^2 + 8w + 8w + 16 + 1\\
+                    &=4(w^2 + 2w + 2w + 4) + 1\\
+                    &=4(w^2 + 4w + 4) + 1
+                \end{align*}
+                \begin{center}
+                    \textbf{for any value $w$, it will be a prime number $\blacksquare$}
+                \end{center}
+            \end{itemize}
+        \end{enumerate}
+        
+        \item \textbf{Problem 5.20}
+        \begin{enumerate}
+            \item Base Case: $n = 1$, $2^0 = 1$, base case proved 
+            \item Induction step: $n$ becomes $n+1$
+            \item We can divide it into two cases, where $n$ is even and $n$ is odd
+            \item Case 1: $n + 1$ is even
+            \begin{align*}
+                n + 1&= 2k\\
+                k &= 2^{w_1} + 2^{w_2} + 2^{w_3} + 2^{w_4} + ... + 2^{w_i}\\
+                n + 1&= 2(2^{w_1} + 2^{w_2} + 2^{w_3} + 2^{w_4} + ... + 2^{w_i})
+            \end{align*}
+            \begin{center}
+                By induction, we proved that even numbers are created by distinct powers of 2 $\blacksquare$
+            \end{center}
+
+            \item Case 2: $n + 1$ is odd
+            \begin{align*}
+                n + 1&=2k + 2^0\\
+                k &= 2^{w_1} + 2^{w_2} + 2^{w_3} + 2^{w_4} + ... + 2^{w_i}\\
+                n + 1 &= 2(2^{w_1} + 2^{w_2} + 2^{w_3} + 2^{w_4} + ... + 2^{w_i}) + 2^0
+            \end{align*}
+            \begin{center}
+                By induction, we proved that odd numbers are created by distinct powers of 2 $\blacksquare$
+            \end{center}
+        \end{enumerate}
+        
+        \item \textbf{Problem 5.39}
+        \begin{enumerate}
+            \item Base Cases:
+            \begin{align*}
+                P(n) &= 4a + 5b\\
+                P(12) &= 4(3) + 5(0)\\
+                P(13) &= 4(2) + 5(1)\\
+                P(14) &= 4(1) + 5(2)\\
+                P(15) &= 4(0) + 5(3)\\
+            \end{align*}
+            \item We create a variable $k$, where $k \geq 15$
+            \item To prove that $P(k)$ is true:
+            \begin{align*}
+                k - 3 &\geq 12 \\
+                k - 3 &= 4a + 5b\\
+                \text{Induction Step: }k + 1 &= (k-3) + 4\\
+                &= 4a + 5b + 4\\
+                &= 4(a + 1) + 5b
+            \end{align*}
+            \item By leaping induction, we proved that for any $k + 1$, it is simply a variant of $4a + 5b$ $\blacksquare$
+        \end{enumerate}
+
+        % \item \textbf{Problem 4.10}
+        % \begin{enumerate}[label=(k)]
+        %     \item a
+        % \end{enumerate}
+        % \begin{enumerate}[label=(l)]
+        %     \item b
+        % \end{enumerate}
+        
+        % \item \textbf{Problem 4.48}
+        % \begin{enumerate}[label=]
+        %     \item If x is negative it'll result in the same value as the absolute value of that x.
+        %     \item 
+        % \end{enumerate}
+        
+        % \item \textbf{Problem 5.12}
+        % \textit{Proof.} We prove by induction that $3^n > n^2$ for all $n \geq 1$
+        % \begin{enumerate}
+        %     \item \textbf{[Base Case]} $n = 1$ \to $3^1$ is greater than $1^2$
+        %     \item \textbf{[Induction Step]} We show that $P(n) \to P(n+1)$ for all $n \geq 1$ via direct proof
+        %     \qquad \textbf{(Induction Hypothesis)} P(n) is T
+        %     \qquad Prove $P(n+1):$\quad $3^{n+1} > (n+1)^2$
+        %     \qquad \quad $3 \cdot 3^n > n^2 + 2n + 1$
+        % \end{enumerate}
+
+        % \item \textbf{Problem 5.20}
+        
+        % \item \textbf{Problem 5.39}
+        
+        % \item \textbf{Problem 6.8}
+        
+        % \item \textbf{Problem 6.43}
+    \end{itemize}
+    
+\end{document}
