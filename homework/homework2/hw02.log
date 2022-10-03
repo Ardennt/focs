@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.15)  1 OCT 2022 16:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.15)  3 OCT 2022 00:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/ardennt/Documents/CS/focs/homework/homework2/file.tex
-(c:/Users/ardennt/Documents/CS/focs/homework/homework2/file.tex
+**c:/Users/ardennt/Documents/CS/focs/homework/homework2/hw02.tex
+(c:/Users/ardennt/Documents/CS/focs/homework/homework2/hw02.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-08-30> (D:\HDD Apps\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -126,8 +126,8 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count274
 \l__pdf_internal_box=\box53
-) (file.aux)
-\openout1 = `file.aux'.
+) (hw02.aux)
+\openout1 = `hw02.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
@@ -197,21 +197,21 @@ LaTeX Warning: The counter will not be printed.
 LaTeX Warning: The counter will not be printed.
              The label is: (l) on input line 83.
 
-[3] [4] [5] (file.aux) )
+[3] [4] [5] (hw02.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 4 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2378 strings out of 475389
- 35517 string characters out of 2789154
+ 2379 strings out of 475389
+ 35521 string characters out of 2789154
  390011 words of memory out of 3000000
  23773 multiletter control sequences out of 15000+600000
  471601 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,10n,62p,292b,642s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\ardennt\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on file.pdf (5 pages, 112789 bytes).
+Output written on hw02.pdf (5 pages, 112789 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
