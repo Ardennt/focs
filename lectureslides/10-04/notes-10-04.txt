@@ -1,0 +1,57 @@
+[10/04/2022]
+
+08-30 (Syllabus) -- Problem Solving...
+
+09-02 Discrete Objects (e.g., sets)
+      -- Well-Ordering Principle
+
+09-09 Propositions/Logic -- Truth Tables
+      -- Implication
+
+09-13 Quantifiers -- Predicate Logic
+      -- Direct Proofs
+
+09-16 Proofs -- Implication
+             -- Contraposition
+             -- Proving Equivalence
+             -- Contradiction
+
+09-20 Induction
+
+09-23 Sets (proofs)
+      Strengthening the claim (for induction)
+      k-Leaping Induction
+
+09-27 Strong Induction
+      Structural Induction
+
+=========================================================
+
+  Problem 4.16(k) --- does proof by contradiction work?
+
+
+                            2
+  Claim: If n is odd, then n  - 1 is divisible by 8
+            --------       ------------------------
+                p      -->      q
+
+
+
+         Proof by contradiction.  Assume n is even.
+
+                             2
+         If n is even, then n  - 1 must be odd.
+
+         Therefore, n is definitely not divisible by 8...?
+
+
+  ******** this proof by contradiction does not hold ********
+
+  ******** compare to this next claim...... *****************
+
+			    2
+  Claim: If n is odd, then n  - 1 is divisible by 6
+
+
+  Our assumption is not correct, i.e.,
+   we cannot assume "not p" to disprove the entire claim "p --> q"

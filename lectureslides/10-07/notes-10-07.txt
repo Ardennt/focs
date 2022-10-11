@@ -1,0 +1,21 @@
+[10/07/2022]
+
+
+The sum of natural numbers 1 to n....
+
+      1     2     3    ...    n
+
+  +   n    n-1   n-2   ...    1
+ --------------------------------------
+    (n+1)+(n+1)+(n+1)+.....+(n+1)
+
+
+      n (n+1)
+     ---------
+         2
+
+
+  Given g(1) = 1  and  g(n) = 2 x g(n - 1) for n > 1.
+
+  Unfold the recursion to derive a simpler form of g(n).
+
