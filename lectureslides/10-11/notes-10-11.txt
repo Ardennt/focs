@@ -1,0 +1,33 @@
+[10/11/2022]
+
+ T  =  2 + 3n
+  n
+
+
+ is_even() has a test and a set
+              (is n even?)  (return 1 or 0)
+
+
+ Recursive definition of integers Z.
+ 1. 0 in Z.  [basis]
+ 2. x in Z --> x+1 in Z;
+    x in Z --> x-1 in Z.  [constructor]
+
+
+
+ Recursive definition of S = { powers of 3 }
+ 1. 1 in S.              [basis]
+ 2. x in S --> 3x in S.  [constructor]
+
+
+ Recursive definition of S (binary palindromes)
+ 1. e,0,1 in S.   [basis]
+ 2. x in S --> 0 x 0 in S and 1 x 1 in S.
+    [constructor]
+
+  e --> 1 e 1 (11) --> 
+
+  alternative idea:  x in S --> x x in S.
+
+
+
