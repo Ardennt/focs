@@ -225,6 +225,11 @@ INPUT D:\HDD Apps\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT D:\HDD Apps\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 OUTPUT hw3.pdf
 INPUT C:\Users\ardennt\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT D:\HDD Apps\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT D:\HDD Apps\MiKTeX\tex\latex\base\omscmr.fd
+INPUT D:\HDD Apps\MiKTeX\tex\latex\base\omscmr.fd
+INPUT D:\HDD Apps\MiKTeX\tex\latex\base\omscmr.fd
+INPUT D:\HDD Apps\MiKTeX\tex\latex\base\omscmr.fd
 INPUT hw3.aux
 INPUT C:\Users\ardennt\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\ardennt\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
@@ -248,6 +253,8 @@ INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\latxfont\line10.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\latxfont\line10.pfb
 INPUT D:\HDD Apps\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb

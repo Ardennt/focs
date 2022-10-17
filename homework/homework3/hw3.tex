@@ -6,7 +6,43 @@
 
 \begin{document}
     \begin{itemize}
-        \item \textbf{Problem 7.9.} $G^0 = 0$. $G_1 = 1$ and $G_n = 7G_{n-1} - 12 G_{n-2}$ for $n > 1$. Compute $G_5$. Show $G_n = 4^n - 3^n$ for $n \geq 0$.
+        \item \textbf{Problem 7.9.} $G^0 = 0$. $G_1 = 1$ and $G_n = 7G_{n-1} - 12 G_{n-2}$ for $n > 1$. Compute $G_5$. Show $G_n = 4^n - 3^n$ for $n \geq 0$.\\
+        \begin{tabular}{ |c|c|c|c|c|c|c| } 
+            \hline
+            $n$ & 0 & 1 & 2 & 3 & 4 & 5\\ 
+            \hline
+            $A_n$ & 0 & 1 & 7 & 37 & 175 & 781 \\
+            \hline
+        \end{tabular}
+        \begin{enumerate}[label=(\roman*)]
+            \item prove the base case:
+            \begin{align*}
+                G(0) = 4^0 - 3^0 = 0
+            \end{align*}
+            \begin{center}
+                base case is true
+            \end{center}
+            \item prove $G(n) = 4^n - 3^n$ for $G(n) = 7G(n-1) - 12G(n-2)$ for $n>1$
+            \begin{align*}
+                4^n - 3^n = 7G(n-1) - 12G(n-2)
+            \end{align*}
+            \begin{center}
+                manipulate the RHS
+            \end{center}
+            \begin{align*}
+                4^n - 3^n &= 7(4^{n-1} - 3^{n-1}) - 12(4^{n-2} - 3^{n-2})\\
+                          &= 7 (\frac{4^n}{4} - \frac{3^n}{3}) - 12(\frac{4^n}{16} - \frac{3^n}{9})\\
+                          &= 7(\frac{4^n \cdot 3 - 3^n \cdot 4}{12}) - 12(\frac{4^n \cdot 9 - 3^n \cdot 16}{144})\\
+                          &= 7(\frac{4^n \cdot 3 - 3^n \cdot 4}{12}) - (\frac{4^n \cdot 9 - 3^n \cdot 16}{12})\\
+                          &= \frac{21(4^n) - 28(3^n) - 9(4^n) + 16(3^n)}{12}\\
+                          &= \frac{12(4^n) - 12(3^n)}{12}\\
+                          &= 4^n - 3^n
+            \end{align*}
+            \begin{center}
+                We prove the statement is true for $n \geq 0$ by direct proof $\hfill\blacksquare$
+            \end{center}
+
+        \end{enumerate}
         \item \textbf{Problem 7.12(c). (See Problem 7.28 for hints.)} Tinker to guess a formula for each recurrence and prove it. In each case $A_1 = 1$ and for $n > 1$:
         \begin{enumerate}[label=(c)]
             \item $A_n = 10nA_{n-1} / (n-1) + n$
@@ -98,8 +134,60 @@
         \begin{enumerate}[label=(d)]
             \item Prove that every third Fibonacci number, $F_{3n}$, is even
         \end{enumerate}
-        \item \textbf{Problem 7.42.}
-        \item \textbf{Problem 7.45(c).}
+        \item \textbf{Problem 7.42.} Give pseudocode for a recursive function that computes $3^{2^n}$ on input $n$.
+        \begin{center}
+            Code example:
+        \end{center}
+        \begin{verbatim}
+            int f(int n):
+                if n is 0 return 3
+                else return f(n-1) squared
+        \end{verbatim}
+        \begin{center}
+            Mathematical function:
+        \end{center}
+        \begin{align*}
+            T_0 &= 3\\
+            T_n &= (T_{n-1})^2
+        \end{align*}
+        \begin{enumerate}[label=(\alph*)]
+            \item Prove that your function correctly computes $3^{2^n}$ for every $n \geq 0$.\\
+            \begin{tabular}{ c|c|c|c|c|c }
+                $n$ & 0 & 1 & 2 & 3 & 4\\
+                \hline
+                $T_n$ & 3 & 9 & 81 & 6561 & 43046721\\
+            \end{tabular}
+            \begin{enumerate}[label=(\roman*)]
+                \item prove the base case for $n = 1$
+                \begin{align*}
+                    T(n) &= T(n-1)^2\\
+                    T(1) &= T(0)^2\\
+                         &= 9
+                \end{align*}
+                \item prove using a direct proof
+                \begin{center}
+                    $T(n) = 3^{2^n}$\\$T(n) = T(n-1)^2$
+                \end{center}
+                \begin{align*}
+                    T(n-1)^2 &= 3^{2^n}\\
+                    (3^{2^{n-1}})^2 &= 3^{2^n} \text{ log both sides}\\
+                    \log{3}((3^{2^{n-1}})^2) &= \log{3}(3^{2^n})\\
+                    2\log{3}(3^{2^{n-1}}) &= \log{3}(3^{2^n})\\
+                    2(2^{n-1}) &= 2^n\\
+                    \text{LHS: } 2(2^{n-1}) &= 2^{n-1+1}\\
+                    &= 2^n
+                \end{align*}
+                \item we prove by a direct proof that our function computes $3^{2^n}$ for every $n \geq 0$ $\hfill\blacksquare$
+            \end{enumerate}
+            \item Obtain a recurrence for the runtime $T_n$. Guess and prove a formula for $T_n$.
+            \begin{enumerate}[label=(\roman*)]
+                \item MISSING
+            \end{enumerate}
+        \end{enumerate}
+        \item \textbf{Problem 7.45(c).} Give recursive definitions for the set $S$ in each of the following cases.
+        \begin{enumerate}[label=(c)]
+            \item $S =$ \{all strings with the same number of 0's and 1's\} (e.g. 0011,0101,100101).
+        \end{enumerate}
         \item \textbf{Problem 7.49.}
         \item \textbf{Problem 8.12(d).}
         \item \textbf{Problem 8.14.}

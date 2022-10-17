@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1665953201 "c:/Users/ardennt/Documents/CS/focs/homework/homework3/hw3.tex" "hw3.pdf" "hw3" 1665953201
+["pdflatex"] 1665982866 "c:/Users/ardennt/Documents/CS/focs/homework/homework3/hw3.tex" "hw3.pdf" "hw3" 1665982866
   "C:/Users/ardennt/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1665947541 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/ardennt/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1663282601 11548 3d9cfb07b8c30a06de6e585e37cbcea8 ""
   "C:/Users/ardennt/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1663279854 10773107 cb191ebd97441df48cbcb8022a0bad00 ""
@@ -12,6 +12,7 @@
   "D:/HDD Apps/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1233955454 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "D:/HDD Apps/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233955454 940 228d6584342e91276bf566bcf9716b83 ""
   "D:/HDD Apps/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "D:/HDD Apps/MiKTeX/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247596666 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
@@ -22,6 +23,7 @@
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1247596666 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
+  "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247596667 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb" 1247596653 11493 4f5ed183a47d3197cf8cd322325db6de ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1247596673 31764 459c573c03a4949a528c2cc7f557e217 ""
   "D:/HDD Apps/MiKTeX/tex/generic/iftex/iftex.sty" 1644000708 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -36,6 +38,7 @@
   "D:/HDD Apps/MiKTeX/tex/latex/amsmath/amsopn.sty" 1655058192 4474 f04cd1cc7bd76eb033e6fb12eb6a0d77 ""
   "D:/HDD Apps/MiKTeX/tex/latex/amsmath/amstext.sty" 1655058193 2444 70065bddd85997dc1fd0bb7ae634e5fa ""
   "D:/HDD Apps/MiKTeX/tex/latex/base/article.cls" 1657041432 20144 7555b7429d80bef287ebb82117811acc ""
+  "D:/HDD Apps/MiKTeX/tex/latex/base/omscmr.fd" 1657041432 2469 5cf30656b812a1b3bb0f58f4a07885f2 ""
   "D:/HDD Apps/MiKTeX/tex/latex/base/size10.clo" 1657041432 8448 e0391042ca0932ede1098ae14ada60ba ""
   "D:/HDD Apps/MiKTeX/tex/latex/cancel/cancel.sty" 1388373847 7592 dd751af313a16a0308545d5bfd7aaaa2 ""
   "D:/HDD Apps/MiKTeX/tex/latex/enumitem/enumitem.sty" 1561039820 51697 f8f08183cd2080d9d18a41432d651dfb ""
@@ -45,9 +48,9 @@
   "D:/HDD Apps/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1661885168 30282 33c465a64f2bd5ad4a68a7b2f555a29b ""
   "D:/HDD Apps/MiKTeX/tex/latex/setspace/setspace.sty" 1324297677 22913 a27d7908fc6f0385466454a966a316eb ""
   "D:/HDD Apps/MiKTeX/tex/latex/tools/enumerate.sty" 1636713860 3468 068d84ef9735e15f11c5a120c0a1a139 ""
-  "c:/Users/ardennt/Documents/CS/focs/homework/homework3/hw3.tex" 1665953200 4954 49346ee5d211e802efc9efc8a591e656 ""
-  "hw3.aux" 1665953201 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "hw3.tex" 1665953200 4954 49346ee5d211e802efc9efc8a591e656 ""
+  "c:/Users/ardennt/Documents/CS/focs/homework/homework3/hw3.tex" 1665982865 8889 5640c59e5a9a064eecf6ce4adb1e2612 ""
+  "hw3.aux" 1665982866 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "hw3.tex" 1665982865 8889 5640c59e5a9a064eecf6ce4adb1e2612 ""
   (generated)
   "hw3.aux"
   "hw3.log"
