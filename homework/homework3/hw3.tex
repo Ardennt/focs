@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[margin=1.25in]{geometry}
 \usepackage{amsmath, amssymb, setspace, enumerate, enumitem}
+\usepackage{graphicx}
 \usepackage[makeroom]{cancel}
 \onehalfspacing
 
@@ -263,11 +264,23 @@
                 \textbf{[constructor(ii)]} $\epsilon \in S \rightarrow 1 \bullet x \bullet 1 \in S$.
             \end{enumerate}
         \end{enumerate}
-        \item \textbf{Problem 7.49.} There are 5 rooted binary trees (RBT) with 3 nodes. How many have 4 nodes?
-        \begin{enumerate}
-            \item hi
+        \item \textbf{Problem 7.49.} There are 5 rooted binary trees (RBT) with 3 nodes. How many have 4 nodes\\
+        \includegraphics[width=100mm,scale=0.5]{binaryTrees.png}
+        \begin{itemize}[label=$\bullet$]
+            \item We can make 14 possible rooted binary trees with 4 nodes.
+        \end{itemize}
+        \item \textbf{Problem 8.12(d).} A set $P$ of parenthesis strings have a recursive definition.
+        \begin{enumerate}[label=\arabic*.]
+            \item $\epsilon \in P$
+            \item $x \in P \rightarrow [x] \in P$\\
+            $x,y \in P \rightarrow xy \in P$
         \end{enumerate}
-        \item \textbf{Problem 8.12(d).}
+        \begin{enumerate}[label=(d)]
+            \item Prove by structural induction that every string $P$ is balanced.
+            \begin{enumerate}[label=\roman*.]
+                \item hi
+            \end{enumerate}
+        \end{enumerate}
         \item \textbf{Problem 8.14.}
     \end{itemize}
     
