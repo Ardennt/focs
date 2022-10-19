@@ -278,8 +278,22 @@
         \begin{enumerate}[label=(d)]
             \item Prove by structural induction that every string $P$ is balanced.
             \begin{enumerate}[label=\roman*.]
-                \item \textbf{[Base case]} When $n=1$ and $x_1 = \epsilon$, it is clearly balanced, $P(1)$ is true
-                \item \textbf{[Induction step]} show
+                \item \textbf{[Base case]} When $n=1$ and $s_1 = \epsilon$, it is clearly balanced, $P(1)$ is true
+                \item \textbf{[Induction step]} We prove that each constructor preserves palindromicity.\\
+                If $x$ is a palindrome, that means $x^R$ will be in $P$, or $x^R =x$. This is our induction hypothesis.
+                \begin{enumerate}[label=\arabic*.]
+                    \item For constructor (i), we must show that $([x])^R = ([x])$.\\
+                    We can rewrite $[x]$ as $[\bullet x \bullet]$\\
+                    $([x])^R = [^R \bullet x^R \bullet ]^R = [\bullet x^R \bullet ] = [\bullet x \bullet] = [x]$\\
+                    A potential set of this could be:\\
+                    $P = {\epsilon, [], [[]], [[[]]], ...}$, all preserving palindromicity.
+                    \item For constructor(ii), we must show that $(xy)^R = xy$.\\
+                    We can rewrite $xy$ as $x \bullet y$\\
+                    $(x \bullet y)^R = x^R \bullet y^R = x \bullet y = xy$\\
+                    A potential set of this could be:
+                    $P = {\epsilon, [], [][], [][][][], ...}$, all preserving palindromicity.
+                \end{enumerate}
+                \item By structural induction, we prove that every string $P$ is balanced given the constructors $\hfill\blacksquare$.
             \end{enumerate}
         \end{enumerate}
         \item \textbf{Problem 8.14.} A set $A$ is defined recursively as shown.
@@ -320,9 +334,8 @@
             \end{enumerate}
             \item Prove that every multiple of 3 is in $A$.
             \begin{enumerate}[label=\arabic*.]
-                \item We prove by contradiction that every multiple of 3 is in $A$. Consider m, a multiple of 3 that is not in $A$
-                \item Consider $m$, a multiple of $3$ that is not in $A$, we can $m = 3k$, for $k \in \mathbb{Z}$.
-                \item \textbf{[Case 1]} $k > 0$, $m = 3k$, $3k$ is not in $A$
+                \item We prove by contradiction that every multiple of 3 is in $A$. Consider m, a multiple of 3 that is not in $A$.
+                \item \textbf{[Case 1]} $k > 0$, $m = 3k$, $3k$ is not in $A$ for $k \in \mathbb{N}$
                 \begin{align*}
                     3k = 3 + 3 + 3 + ...
                 \end{align*}
@@ -340,7 +353,7 @@
                          &= 3k + 3 - 3\\
                          &= 3k \text{, where we derive a contradiction!}
                 \end{align*}
-                \item \textbf{[Case 2]} $k < 0$, $m = -3k$, $-3k$ is not in $A$
+                \item \textbf{[Case 2]} $k < 0$, $m = -3k$, $-3k$ is not in $A$.
                 \begin{align*}
                     3(-k) = -3 -3 -3 -3 -3 -3 -...
                 \end{align*}
