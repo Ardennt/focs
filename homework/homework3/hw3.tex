@@ -278,10 +278,48 @@
         \begin{enumerate}[label=(d)]
             \item Prove by structural induction that every string $P$ is balanced.
             \begin{enumerate}[label=\roman*.]
-                \item hi
+                \item \textbf{[Base case]} When $n=1$ and $x_1 = \epsilon$, it is clearly balanced, $P(1)$ is true
+                \item \textbf{[Induction step]} show
             \end{enumerate}
         \end{enumerate}
-        \item \textbf{Problem 8.14.}
+        \item \textbf{Problem 8.14.} A set $A$ is defined recursively as shown.
+        \begin{enumerate}[label=\arabic*.]
+            \item $3 \in A$.
+            \item $x,y \in A \rightarrow x + y \in A$;\\
+            $x,y \in A \rightarrow x-y \in A$.
+        \end{enumerate}
+        \begin{enumerate}[label=(\alph*)]
+            \item Prove that every element of $A$ is a multiple of 3.
+            \begin{enumerate}[label=\arabic*.]
+                \item Prove by structural induction that every element in $A$ is a multiple of $3$.
+                \item \textbf{[Base case]} for P(0), we have both:
+                \begin{align*}
+                    3 + 3 \in A &= 6\\
+                    3 - 3 \in A &= 0
+                \end{align*}
+                \begin{center}
+                    both are multiples of 3
+                \end{center}
+                \item \textbf{[Induction step]} suppose $x, y \in A$ and both $x$ and $y$ are multiples of 3
+                \begin{align*}
+                    x &= 3k\\
+                    y &= 3k
+                \end{align*}
+                \begin{center}
+                    the constructor rules allow us to create the following formula:
+                \end{center}
+                \begin{align*}
+                    x + y &\in A\\
+                    3k + 3w &\in A\\
+                    3(k+w) &\in A
+                \end{align*}
+                \begin{center}
+                    Adding two numbers that are multiples of 3 will always result in a number that is a multiple of 3
+                \end{center}
+                \item By structural induction, we conclude that ever member of $A$ is a multiple of $3\hfill\blacksquare$
+            \end{enumerate}
+            \item Prove that every multiple of 3 is in $A$.
+        \end{enumerate}
     \end{itemize}
     
 \end{document}
