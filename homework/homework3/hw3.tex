@@ -319,6 +319,57 @@
                 \item By structural induction, we conclude that ever member of $A$ is a multiple of $3\hfill\blacksquare$
             \end{enumerate}
             \item Prove that every multiple of 3 is in $A$.
+            \begin{enumerate}[label=\arabic*.]
+                \item We prove by contradiction that every multiple of 3 is in $A$. Consider m, a multiple of 3 that is not in $A$
+                \item Consider $m$, a multiple of $3$ that is not in $A$, we can $m = 3k$, for $k \in \mathbb{Z}$.
+                \item \textbf{[Case 1]} $k > 0$, $m = 3k$, $3k$ is not in $A$
+                \begin{align*}
+                    3k = 3 + 3 + 3 + ...
+                \end{align*}
+                \begin{center}
+                    We can consider $3(k+1)$, which we know is in our set
+                \end{center}
+                \begin{align*}
+                    3(k+1) = 3k+3
+                \end{align*}
+                \begin{center}
+                    We know by constructor(ii) that $x-y \in A$, and we know that $3 \in A$ by the basis.
+                \end{center}
+                \begin{align*}
+                    3(k) &= x - y \text{, where } x = 3k + 3 \text{ and } y = 3\\
+                         &= 3k + 3 - 3\\
+                         &= 3k \text{, where we derive a contradiction!}
+                \end{align*}
+                \item \textbf{[Case 2]} $k < 0$, $m = -3k$, $-3k$ is not in $A$
+                \begin{align*}
+                    3(-k) = -3 -3 -3 -3 -3 -3 -...
+                \end{align*}
+                \begin{center}
+                    We can consider $-3(k+1)$, which we know is in our set.
+                \end{center}
+                \begin{align*}
+                    -3(k+1) = -3k-3
+                \end{align*}
+                \begin{center}
+                    We know by constructor(i) that $x+y \in A$, and we know that $3 \in A$ by the basis.
+                \end{center}
+                \begin{align*}
+                    -3k &= x+y \text{, where } x = -3k -3 \text{ and } y = 3\\
+                        &= -3k -3 + 3\\
+                        &= -3k \text{, where we derive a contradiction!}
+                \end{align*}
+                \item \textbf{[Case 3]} $k = 0$, $m = 0$, $0$ is not in $A$
+                \begin{center}
+                    We know from the basis that $x = 3$ and $y = 3$\\
+                    From constructor(ii), we can use $x - y$, where:
+                \end{center}
+                \begin{align*}
+                    x - y &\in A\\
+                    3 - 3 &\in A\\
+                    0 &\in A \text{, where we derive a contradiction!}
+                \end{align*}
+                \item We prove by contradiction for 3 distinct cases of $k$, proving that all multiples of 3 is in $A \hfill\blacksquare$
+            \end{enumerate}
         \end{enumerate}
     \end{itemize}
     
