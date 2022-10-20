@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1666215499 "c:/Users/ardennt/Documents/CS/focs/homework/homework3/hw3.tex" "hw3.pdf" "hw3" 1666215500
+["pdflatex"] 1666298460 "c:/Users/ardennt/Documents/CS/focs/homework/homework3/hw3.tex" "hw3.pdf" "hw3" 1666298461
   "C:/Users/ardennt/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1665947541 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/ardennt/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1663282601 11548 3d9cfb07b8c30a06de6e585e37cbcea8 ""
   "C:/Users/ardennt/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1663279854 10773107 cb191ebd97441df48cbcb8022a0bad00 ""
@@ -65,9 +65,9 @@
   "D:/HDD Apps/MiKTeX/tex/latex/setspace/setspace.sty" 1324297677 22913 a27d7908fc6f0385466454a966a316eb ""
   "D:/HDD Apps/MiKTeX/tex/latex/tools/enumerate.sty" 1636713860 3468 068d84ef9735e15f11c5a120c0a1a139 ""
   "binaryTrees.png" 1666137916 760171 86e7630d5e37a07bda46ebddb81d7e08 ""
-  "c:/Users/ardennt/Documents/CS/focs/homework/homework3/hw3.tex" 1666215499 19311 319aa6ba2560e2c0f6d1ae3b1f3f40aa ""
-  "hw3.aux" 1666215500 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
-  "hw3.tex" 1666215499 19311 319aa6ba2560e2c0f6d1ae3b1f3f40aa ""
+  "c:/Users/ardennt/Documents/CS/focs/homework/homework3/hw3.tex" 1666298459 19624 095cb8ef8c96fa643cd8b2269d05b15c ""
+  "hw3.aux" 1666298461 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
+  "hw3.tex" 1666298459 19624 095cb8ef8c96fa643cd8b2269d05b15c ""
   (generated)
   "hw3.aux"
   "hw3.log"

@@ -16,28 +16,29 @@
             \hline
         \end{tabular}
         \begin{enumerate}[label=(\roman*)]
-            \item prove the base case:
+            \item Prove the base case:
             \begin{align*}
                 G(0) = 4^0 - 3^0 = 0
             \end{align*}
             \begin{center}
-                base case is true
+                base case is true\\
             \end{center}
-            \item prove $G(n) = 4^n - 3^n$ for $G(n) = 7G(n-1) - 12G(n-2)$ for $n>1$
+            \item With induction hypothesis: assume $G(n) = 4^n - 3^n$, prove by direct proof that\\ $G(n) = 4^n - 3^n \rightarrow G(n+1) = 4^{n+1} - 3^{n+1}$ for all $n \geq 0$.
             \begin{align*}
-                4^n - 3^n = 7G(n-1) - 12G(n-2)
+                G(n + 1) &= 7G(n+1-1) - 12G(n+1-2) \text{ (recursive definition)}\\ 
+                &= 7G(n) - 12G(n-1)\\
+                7G(n) - 12G(n-1) &= 4^{n+1} - 3^{n+1}
             \end{align*}
             \begin{center}
-                manipulate the RHS
+                manipulate the LHS
             \end{center}
             \begin{align*}
-                4^n - 3^n &= 7(4^{n-1} - 3^{n-1}) - 12(4^{n-2} - 3^{n-2})\\
-                          &= 7 (\frac{4^n}{4} - \frac{3^n}{3}) - 12(\frac{4^n}{16} - \frac{3^n}{9})\\
-                          &= 7(\frac{4^n \cdot 3 - 3^n \cdot 4}{12}) - 12(\frac{4^n \cdot 9 - 3^n \cdot 16}{144})\\
-                          &= 7(\frac{4^n \cdot 3 - 3^n \cdot 4}{12}) - (\frac{4^n \cdot 9 - 3^n \cdot 16}{12})\\
-                          &= \frac{21(4^n) - 28(3^n) - 9(4^n) + 16(3^n)}{12}\\
-                          &= \frac{12(4^n) - 12(3^n)}{12}\\
-                          &= 4^n - 3^n
+                7G(n) - 12G(n-1) &= 7(4^{n} - 3^{n})  - 12(4^{n-1} - 3^{n-1})\text{ (induction hypothesis)}\\
+                &= 7(4^n - 3^n) - \cancel{12}(\frac{4^n(3) - 3^n(4)}{\cancel{12}})\\
+                &= 7(4^n - 3^n) - (3(4^n) - 4(3^n))\\
+                &= 7(4^n) - 7(3^n) - 3(4^n) - 4(3^n)\\
+                &= 4(4^n) - 3(3^n)\\
+                &= 4^{n+1} - 3^{n+1}
             \end{align*}
             \begin{center}
                 We prove the statement is true for $n \geq 0$ by direct proof $\hfill\blacksquare$
@@ -68,22 +69,23 @@
                 \begin{center}
                     base case proven
                 \end{center}
-
-                \item prove using direct proof
+                \item With induction hypothesis: assume $A(n) = \frac{10^n - 1}{9}n$, prove by direct proof that $A(n) = \frac{10^n - 1}{9}n \rightarrow A(n+1) = \frac{10^{n+1} - 1}{9}(n+1)$ for all $n > 0$.
                 \begin{align*}
-                    10n\frac{A(n-1)}{n-1} + n = \frac{10^n-1}{9}(n)
+                    A(n) &= \frac{10nA(n-1)}{n-1}+n\\
+                    A(n+1) &= \frac{10(n+1)A(n)}{n} + (n+1) \text{ (recursive definition)}
                 \end{align*}
                 \begin{center}
-                    with with LHS
+                    with with RHS
                 \end{center}
                 \begin{align*}
-                    10n\frac{A(n-1)}{n-1} + n &= 10n \frac{\frac{10^{n-1}-1}{9}\cancel{(n-1)}}{\cancel{n-1}} + n\\
-                                              &= \cancel{(10)}n(\frac{10^n - 10}{\cancel{10}}\frac{1}{9}) + n\\
-                                              &= n \frac{10^n - 10}{9} + n\\
-                                              &= n \frac{10^n - 10}{9} + \frac{9n}{9}\\
-                                              &= \frac{10^nn - 10n + 9n}{9}\\
-                                              &= \frac{10^nn - n}{9}\\
-                            \frac{10^n-1}{9}n &= \frac{10^n-1}{9}n
+                    A(n+1) &= \frac{10(n+1)A(n)}{n} + (n+1) \text{ (induction hypothesis)}\\
+                    &= \frac{10(n+1)(\frac{10^n-1}{9}\cancel{n})}{\cancel{n}} + (n+1)\\
+                    &= \frac{10(n+1)(10^n-1)}{9} + (n+1)\\
+                    &= \frac{(10n+10)(10^n-1) + 9(n+1)}{9}\\
+                    &= \frac{10n(10^n) - 10n + 10(10^n) - 10 + 9n + 9}{9}\\
+                    &= \frac{10n(10^n) - n + 10^{n+1} - 1}{9}\\
+                    &= \frac{10^{n+1}n - n + 10^{n+1} - 1}{9}\\
+                    &= \frac{10^{n+1} - 1}{9}(n+1)
                 \end{align*}
                 \item we prove by direct proof that the statement is true for all $n > 1$ $\hfill \blacksquare$
             \end{enumerate}
@@ -117,7 +119,7 @@
                     aM(n-1)^2 &= a2^{2^{n-1}}\\
                     M(n-1)^2 &= 2^{2^{n-1}} \text{ simplify}\\
                     \log_{2}(M(n-1)^2) &= \log_2(2^{2^{n-1}}) \text{ log both sides}\\
-                    \log_{2}(M(n-1)^2) &= 2^{2^{n-1}}\\
+                    \log_{2}(M(n-1)^2) &= 2^{2^{n-1}}
                 \end{align*}
                 \begin{center}
                     work with LHS
@@ -128,7 +130,7 @@
                                        & = 2(2^{n-2})\\
                                        & = 2^{n-1}
                 \end{align*}
-                \item we prove by direct proof that the statement is true for all $n > 1$ $\hfill\blacksquare$
+                \item we prove by direct proof that the statement is true for all $n > 0$ $\hfill\blacksquare$
             \end{enumerate}
         \end{enumerate}
         \item \textbf{Problem 7.19(d).} Recall the Fibonacci numbers: $F_1$, $F_2 = 1$; and, $F_n = F_{n-1} + F_{n-2}$ for $n > 2$
@@ -139,7 +141,7 @@
                 \item prove the base case:
                 \begin{align*}
                     F_{3n-1} &= F_2 \text{ when $n=1$, } \rightarrow F_2 = 1\\
-                    F_{3n-2} &= F_1 \text{ when $n=1$, } \rightarrow F_1 = 1\\
+                    F_{3n-2} &= F_1 \text{ when $n=1$, } \rightarrow F_1 = 1
                 \end{align*}
                 \item since the fibonacci sequence is a sum of the previous two terms, we can make the following assumptions:
                 \begin{center}
@@ -150,7 +152,7 @@
                     F_{3n-1} &= 2k + (2j + 1)\\
                              &= 2(k + j) + 1\\
                     F_{3n-2} &= (2w + 1) + 2i\\
-                             &= 2(w + i) + 1\\
+                             &= 2(w + i) + 1
                 \end{align*}
                 \begin{center}
                     plugging back into the original function, we get:
@@ -158,7 +160,7 @@
                 \begin{align*}
                     F_{3n} &= [2(k+j) + 1] + [2(w+i) + 1]\\
                            &= 2(k + j) + 2(w+i) + 2\\
-                           &= 2(k + j + w + i + 1)\\
+                           &= 2(k + j + w + i + 1)
                 \end{align*}
                 \begin{center}
                     We prove that the statement is true for all $n > 2$ $\hfill\blacksquare$
@@ -335,12 +337,12 @@
             \item Prove that every multiple of 3 is in $A$.
             \begin{enumerate}[label=\arabic*.]
                 \item We prove by contradiction that every multiple of 3 is in $A$. Consider m, a multiple of 3 that is not in $A$.
-                \item \textbf{[Case 1]} $k > 0$, $m = 3k$, $3k$ is not in $A$ for $k \in \mathbb{N}$
+                \item \textbf{[Case 1]} $k > 0$, $m = 3k$, where $m$ is the largest multiple of 3 NOT in our set $A$.
                 \begin{align*}
                     3k = 3 + 3 + 3 + ...
                 \end{align*}
                 \begin{center}
-                    We can consider $3(k+1)$, which we know is in our set
+                    We can consider $3(k+1)$, which we know is in our set since it is larger than $m$
                 \end{center}
                 \begin{align*}
                     3(k+1) = 3k+3
@@ -351,17 +353,17 @@
                 \begin{align*}
                     3(k) &= x - y \text{, where } x = 3k + 3 \text{ and } y = 3\\
                          &= 3k + 3 - 3\\
-                         &= 3k \text{, where we derive a contradiction!}
+                         &= 3k \text{ woops, we derived a contradiction!}
                 \end{align*}
-                \item \textbf{[Case 2]} $k < 0$, $m = -3k$, $-3k$ is not in $A$.
+                \item \textbf{[Case 2]} $k < 0$, $m = -3k$, where $m$ is the smallest multiple of 3 NOT in our set A.
                 \begin{align*}
                     3(-k) = -3 -3 -3 -3 -3 -3 -...
                 \end{align*}
                 \begin{center}
-                    We can consider $-3(k+1)$, which we know is in our set.
+                    We can consider $3(-k - 1)$, which we know is in our set since it is smaller than $m$
                 \end{center}
                 \begin{align*}
-                    -3(k+1) = -3k-3
+                    3(-k-1) = -3k-3
                 \end{align*}
                 \begin{center}
                     We know by constructor(i) that $x+y \in A$, and we know that $3 \in A$ by the basis.
@@ -369,7 +371,7 @@
                 \begin{align*}
                     -3k &= x+y \text{, where } x = -3k -3 \text{ and } y = 3\\
                         &= -3k -3 + 3\\
-                        &= -3k \text{, where we derive a contradiction!}
+                        &= -3k \text{ woops, we derived a contradiction!}
                 \end{align*}
                 \item \textbf{[Case 3]} $k = 0$, $m = 0$, $0$ is not in $A$
                 \begin{center}
@@ -379,7 +381,7 @@
                 \begin{align*}
                     x - y &\in A\\
                     3 - 3 &\in A\\
-                    0 &\in A \text{, where we derive a contradiction!}
+                    0 &\in A \text{ woops, we derived a contradiction!}
                 \end{align*}
                 \item We prove by contradiction for 3 distinct cases of $k$, proving that all multiples of 3 is in $A \hfill\blacksquare$
             \end{enumerate}

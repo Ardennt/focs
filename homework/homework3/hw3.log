@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.15)  19 OCT 2022 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.15)  20 OCT 2022 16:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -253,28 +253,28 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/ardennt/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3] [4] [5]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 260.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 262.
  (D:\HDD Apps\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 260.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 262.
 <binaryTrees.png, id=32, 600.2425pt x 396.48125pt>
 File: binaryTrees.png Graphic file (type png)
 <use binaryTrees.png>
-Package pdftex.def Info: binaryTrees.png  used on input line 268.
+Package pdftex.def Info: binaryTrees.png  used on input line 270.
 (pdftex.def)             Requested size: 300.12051pt x 198.24013pt.
  [6 <./binaryTrees.png>] [7] [8] (hw3.aux) ) 
 Here is how much of TeX's memory you used:
  4118 strings out of 475389
  65126 string characters out of 2789154
- 420611 words of memory out of 3000000
+ 421611 words of memory out of 3000000
  25440 multiletter control sequences out of 15000+600000
  471769 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,19n,67p,294b,589s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\ardennt\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw3.pdf (8 pages, 607006 bytes).
+Output written on hw3.pdf (8 pages, 607442 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
