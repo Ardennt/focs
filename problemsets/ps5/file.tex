@@ -40,6 +40,14 @@
       $= n(n+1)(2^{n+1}-1) - \frac{n(n+1)}{2}$ & Simplify \\[0.25in]
     \end{tabular}
   \end{enumerate}
+  \begin{enumerate}[label=(k)]
+    \item $\displaystyle \sum_{i=0}^n\sum_{j=0}^i i2^j$\\[0.25in]
+    \begin{tabular}{l c}
+      $= \displaystyle \sum_{i=0}^n i \displaystyle \sum_{j=0}^n 2^i$ & Innermost Sum\\[0.25in]
+      $= \displaystyle \sum_{i=0}^n i(2^{i+1}-1)$ & Common Sums\\[0.25in]
+      $= \displaystyle \sum_{i=0}^n i$ & The rest in ipad...
+    \end{tabular}
+  \end{enumerate}
   \item \textbf{*Problem 9.14.} Determine which of these functions is in $\Theta(n)$, in $\Theta(n^2)$, or neither.\\
   \begin{tabular}{c c c}
     $\Theta(n)$ & $\Theta(n^2)$ & neither \\
