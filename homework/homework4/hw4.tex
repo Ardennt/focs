@@ -1,346 +1,91 @@
-\documentclass[11pt]{article}
-\usepackage{datetime}
-\usepackage{color,array,graphics}
-\usepackage{enumerate}
-\usepackage[pdftex, colorlinks, linkcolor=red,citecolor=red,urlcolor=blue]{hyperref}
-\usepackage{ulem}
-
-\setlength{\parindent}{0cm}
-
-\setlength{\parskip}{0.3cm plus4mm minus3mm}
-
-\textwidth  6.5in
-\oddsidemargin +0.0in
-\evensidemargin +0.0in
-\textheight 9.0in
-\topmargin -0.5in
-
-\usepackage{upquote,textcomp}
-\usepackage{amssymb,amsmath,amsfonts,amsthm}
-\usepackage{graphicx}
-\usepackage{multicol}
-\usepackage[T1]{fontenc}
-
-\def\OR{\vee}
-\def\AND{\wedge}
-\def\imp{\rightarrow}
-
-\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
-\DeclareMathSymbol{\N}{\mathbin}{AMSb}{"4E}
-\DeclareMathSymbol{\Z}{\mathbin}{AMSb}{"5A}
-\DeclareMathSymbol{\R}{\mathbin}{AMSb}{"52}
-\DeclareMathSymbol{\Q}{\mathbin}{AMSb}{"51}
-\DeclareMathSymbol{\I}{\mathbin}{AMSb}{"49}
-\DeclareMathSymbol{\C}{\mathbin}{AMSb}{"43}
+\documentclass{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{amsmath, amssymb, setspace, enumerate, enumitem}
 
 \begin{document}
-\thispagestyle{empty}   %% skips page number on the first page
+  \begin{enumerate}[label=\textbf{10.32}]
+    \item for $k \in \mathbb{Z}$, show that $2^k - 1$ and $2^k + 1$ are relatively prime.
+    
+    \begin{itemize}
+      \item If two num are relatively prime, then $gcd(a,b) = 1$
+      \item By definition, we know $K \in \mathbb{N}$, making $2^k-1$ and $2^k+1 =1$, $3$ respectively when $k=1$. We state that $gcd(a,b)$ is also in $\mathbb{N}$. Which means $d \in \mathbb{N}$.
+      \item We know that $gcd(2^k-1, 2^k+1) = d$, now we must prove $d=1$ by direct proof.
+    \end{itemize}
 
-\begin{center}
-\large
-\textbf{CSCI 2200 --- Foundations of Computer Science (FoCS) \\
-Homework 4 (document version 1.0)}
-\end{center}
+    $d|2^k-1$ tells us $2^k-1 = pd$ for $p\in\mathbb{Z}$\\
+    $d|2^k+1$ tells us $2^k+1 = qd$ for $q\in\mathbb{Z}$\\
+    rearranging $2^k - 1 = pd$, we can get $2^k = pd + 1$\\
+    plugging in, we get $pd + 1 + 1 = qd$\\
+    moving everything around, we get $2 = d(q-p)$.\\
+    This tells us that, to satisfy this equation, we only have 2 possibilities of what d can be $\rightarrow d= 1$, $d=2$ since $d\in\mathbb{N}$\\[0.25in]
+    We can show that $d\neq 2$ by contradiction:\\
+    We know that $2^k$ is an even number, we can write $2^k = 2i$ for $i \in \mathbb{N}$\\
+    Both numbers $2^k - 1$ and $2^k+1$ are odd numbers, we can rewrite it as $2^k + 1 = 2i + 1$ and $2^k - 1 = 2i-1$\\
+    To prove $gcd(2i + 1, 2i - 1) \neq 2$, we contradict it and say $gcd(2i+1, 2i-1)=2$\\
+    We can say $2|2i+1$ and $2|2i-1$, which means that $2i + 1 = 2z$ and $2i - 1 = 2h$, respective, where $z,h\in \mathbb{Z}$ that satisfy the equation\\
+    \begin{tabular}{c | c}
+      $1 = 2z-2i$ & $-1 = 2h - 2i$\\
+      $1 = 2(z-i)$ & $-1 = 2(h-i)$\\
+      $\frac{1}{2} = (z-i)$ & $\frac{-1}{2} = (h-i)$
+    \end{tabular}\\
+    Oops, the sum of the two integers can never result in a fraction! We have derived a contradiction, proving that $d \neq 2$\\
+    This leaves us with $d=1$, proving that $gcd(2^k-1,2^k+1) = d$, where $d=1$. Showing that these two numbers are relatively prime.
+  \end{enumerate}
 
-\section*{Overview}
-\begin{itemize}
-\item This homework is due by 11:59PM on Thursday, November~3
-\item You may work on this homework in a group of no more than four students;
-  unlike recitation problem sets,
-  \textbf{your teammates may be in any section}
-\item You may use at most \textbf{three} late days on this assignment
-\item Please start this homework early and ask questions during
-  office hours; % and at your September~14 recitation section;
-  also ask (and answer) questions on the Discussion Forum 
-\item Please be concise in your answers;
-  even if your solution is correct, if it is not well-presented,
-  you may still lose points
-\item You can type or hand-write (or both) your solutions
-  to the required graded problems below;
-  \textbf{all work must be organized in one PDF that lists
-  all teammate names}
-\item You are strongly encouraged to use LaTeX, in particular for
-  mathematical symbols;
-  see references in Course Materials
-\item \textbf{EARNING LATE DAYS:}
-  for each homework that you complete using LaTeX
-  (including any tables, graphs, etc., i.e.,~no hand-written anything),
-  you earn one additional late day;
-  you can draw graphs and other diagrams
-  in another application and include them as image files
-\item To earn a late day, you must submit your LaTeX files
-  (i.e.,~\verb+*.tex+) along with your one required PDF file---please name
-  the PDF file \verb+hw4.pdf+
-\item Also note that the earned late day can be used
-  retroactively, even back to the first homework assignment!
-\end{itemize}
-
-\vspace{0.2in}
-
-%\begin{center}
-%\includegraphics[scale=0.5]{math-bitmoji.png}
-%\end{center}
-
-\newpage
-\section*{Warm-up exercises}
-The problems below are good practice problems to work on.
-Do not submit these as part of your homework submission.
-\textbf{These are ungraded problems.}
-
-\begin{multicols}{2}
-\begin{itemize}
-
-% 10+
-\item \textbf{Problem 9.20.}
-\item \textbf{Problem 9.23(a).}
-\item \textbf{Problem 9.28.}
-\item \textbf{Problem 10.8.}
-\item \textbf{Problem 10.10.}
-\item \textbf{Problem 10.11.}
-\item \textbf{Problem 10.15(a-b).}
-\item \textbf{Problem 10.22(b-c,e).}
-\item \textbf{Problem 10.29.}
-\item \textbf{Problem 11.3.}
-\item \textbf{Problem 11.5.}
-\item \textbf{Problem 11.10.}
-\item \textbf{Problem 11.13.}
-\item \textbf{Problem 11.15.}
-
-\end{itemize}
-\end{multicols}
-
-\section*{Graded problems}
-The problems below are required and will be graded.
-\begin{itemize}
-
-% 8+
-\item \textbf{*Problem 9.23(b).}
-\item \textbf{*Problem 10.13.}
-\item \textbf{*Problem 10.18(a-b).}
-\item \textbf{*Problem 10.22(a,d).}
-\item \textbf{*Problem 10.32.}
-\item \textbf{*Problem 11.11.}
-\item \textbf{*Problem 11.17.}
-\item \textbf{*Problem 11.27.}
-
-\end{itemize}
-
-Some of the above problems (graded and ungraded)
-are transcribed in the pages that follow.
-
-Graded problems are noted with an asterisk~(*).
-
-If any typos exist below, please use the textbook description.
-
-\newpage
-\begin{itemize}
-
-\item \textbf{Problem 9.20.}
-Prove or disprove:
-\begin{enumerate}[(a)]
-\begin{multicols}{4}
-\item $\displaystyle\frac{n^3+2n}{n^2+1}\in\Theta(n)$
-\item $(n+1)!\in\Theta(n!)$
-\item $n^{1/n}\in\Theta(1)$
-\item $(n!)^{1/n}\in\Theta(n)$
-\end{multicols}
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{Problem 9.23(a).}
-Prove by contradiction: (a)~$n^3\not\in O(n^2)$
-
-\vspace{0.1in}
-
-\item \textbf{*Problem 9.23(b).}
-Prove by contradiction: (b)~$2^n\not\in O(3^n)$
-
-\vspace{0.1in}
-
-\item \textbf{Problem 9.28.}
-For recurrence $f(0)=1$; $f(n)=nf(n-1)$, compare $f(n)$ with (a)~$2^n$ (b)~$n^n$.
-
-\vspace{0.1in}
-
-\item \textbf{Problem 10.8.}
-What natural numbers are relatively prime to 2, 3, and 6?
-
-\vspace{0.1in}
-
-\item \textbf{Problem 10.10.}
-For any $m,n,x\in\Z$, prove that $\text{gcd}(m,n)=\text{gcd}(m,n-mx)$.
-
-\vspace{0.1in}
-
-\item \textbf{Problem 10.11.}
-Use Euclid's algorithm and the remainders generated to solve these problems.
-\begin{enumerate}[(a)]
-\item Compute $\text{gcd}(1200,2250)$ and find $x,y\in\Z$
-  for which $\text{gcd}(1200,2250)=1200\cdot x+2250\cdot y$.
-\item Find $x,y$ as in (a) but with the additional requirement that $x\le 0$ and $y\ge 0$.
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{*Problem 10.13.}
-Let $d=\text{gcd}(m,n)$, where $m,n>0$.
-Bezout gives $d=mx+ny$, where $x,y\in\Z$.
-Prove or disprove:
-\begin{enumerate}[(a)]
-\item It is always possible to choose: (i)~$x>0$ (ii)~$x<0$.
-\item It is possible to find another $x,y\in\Z$ for which $0<mx+ny<d$.
-\item It is always possible to find $a,b\in\Z$ for which $ax+by=1$.
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{Problem 10.15(a-b).}
-Prove.
-\begin{enumerate}[(a)]
-\item If $a$ divides $bc$ and $\text{gcd}(a,b)=1$ then $a$ divides $c$.
-\item For any prime $p$, if $p|a_1a_2\ldots a_n$ then $p$ divides one of the $a_i$.
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{*Problem 10.18(a-b).}
-The Fibonacci numbers are: $F_1=F_2=1$ and $F_n=F_{n-1}+F_{n-2}$ for $n>2$.
-\begin{enumerate}[(a)]
-\item Prove that $\text{gcd}(F_n,F_{n+1})=1$.
-  (Consecutive Fibonacci numbers are relatively prime.)
-\item Prove that for $n\ge 1$, $F_m|F_{mn}$.
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{*Problem 10.22(a,d).}
-You may find Bezout's identity useful for answering these questions.
-\begin{enumerate}[(a)]
-\item Prove that consecutive integers $n$ and $n+1$ are relatively prime.
-\setcounter{enumi}{3}
-\item For $k\in\Z$, prove that $2k+1$ and $9k+4$ are relatively prime.
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{Problem 10.22(b-c,e).}
-You may find Bezout's identity useful for answering these questions.
-\begin{enumerate}[(a)]
-\setcounter{enumi}{1}
-\item For which positive $n$ are the pair $n$ and $n+2$ relatively prime?
-  Prove your answer.
-\item Let $p$ be a prime.
-  For which positive $n$ are the pair $n$ and $n+p$ relatively prime?
-  Prove your answer.
-  [Hint: If $n$ is not a multiple of $p$ then $\text{gcd}(n,p)=1$.]
-\setcounter{enumi}{4}
-\item As a function of $k\in\Z$, compute $\text{gcd}(2k-1,9k+4)$.
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{Problem 10.29.}
-Solve each measuring problem, or explain why it can't be done.
-(You have unlimited water.)
-\begin{enumerate}[(a)]
-\item Using 6- and 15-gallon jugs, measure (i)~3~gallons (ii)~4~gallons (iii)~5~gallons.
-\item Using 5- and 11-gallon jugs, measure (i)~6~gallons (ii)~7~gallons.
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{*Problem 10.32.}
-For $k\in\N$, show that $2^k-1$ and $2^k+1$ are relatively prime.
-
-\vspace{0.1in}
-
-\item \textbf{Problem 11.3.}
-Give the degree sequences of $K_{n+1}$, $K_{n,n}$, $L_n$, $C_n$, $S_{n+1}$, and $W_{n+1}$.
-
-\vspace{0.1in}
-
-\item \textbf{Problem 11.5.}
-A graph is regular if every vertex has the same degree.
-Which of these graphs are regular?
-\begin{enumerate}[(a)]
-\begin{multicols}{7}
-\item $K_6$
-\item $K_{4,5}$
-\item $K_{5,5}$
-\item $L_6$
-\item $S_6$
-\item $W_4$
-\item $W_5$
-\end{multicols}
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{Problem 11.10.}
-Give graphs with these degree distributions, or explain why you can't.
-Verify $2|E|=\displaystyle\sum_{i=1}^n \delta_i$.
-\begin{enumerate}[(a)]
-\begin{multicols}{4}
-\item $[5,3,3,2,1]$
-\item $[3,2,1,1,1]$
-\item $[3,3,2,1]$
-\item $[3,3,3,3,3]$
-\item $[3,3,3,3,3,3]$
-\item $[3,3,2,2,2]$
-\item $[4,4,4,4,4]$
-\item $[4,4,3,2,1]$
-\item $[4,3,3,2,2]$
-\item $[3,3,3,2,2]$
-\item $[3,3,3,3,2]$
-\item $[5,3,2,2,2]$
-\end{multicols}
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{*Problem 11.11.}
-In a graph only the two vertices $u,v$ have odd degree.
-Prove there is a path from $u$ to $v$.
-
-\vspace{0.1in}
-
-\item \textbf{Problem 11.13.}
-Compute the number of edges in the following graphs:
-\begin{enumerate}[(a)]
-\begin{multicols}{7}
-\item $K_n$
-\item $K_{n,\ell}$
-\item $W_n$
-\end{multicols}
-\end{enumerate}
-
-\newpage
-
-\item \textbf{Problem 11.15.}
-A graph is $r$-regular if every vertex has the same degree~$r$. Show:
-\begin{enumerate}[(a)]
-\item If $r$ is even and $n>r$, there is an $r$-regular graph with $n$ vertices. (Tinker!)
-\item If $r$ is odd and $n$ is odd, there is no $r$-regular graph with $n$ vertices.
-\item If $r$ is odd and $n>r$ is even, there is an $r$-regular graph with $n$ vertices.
-\item An $r$-regular graph with $4k$ vertices must have an even number of edges.
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{*Problem 11.17.}
-A graph $G$ has $n$ vertices.
-\begin{enumerate}[(a)]
-\item What is the maximum number of edges $G$ can have and not be connected? Prove it.
-\item What is the minimum number of edges $G$ can have and be connected? Prove it.
-\end{enumerate}
-
-\vspace{0.1in}
-
-\item \textbf{*Problem 11.27.}
-Every vertex degree in a graph is at least 2.
-Prove that there is at least one cycle.
-
-\end{itemize}
-
+  \begin{enumerate}[label=\textbf{11.17}]
+    \item A graph $G$ has $n$ vertices
+    \begin{enumerate}
+      \item What is the maximum number of edges $G$ can have and not be connected? Prove it.\\[0.25in]
+      Consider a graph G with multiple connected components. Let's call the different connected components $G^\prime$ and $G^{\prime\prime}$ and so on... Each of the connected components are disconnected from each other. In short, $G$ is a connected graph with multiple connected components.\\[0.25in]
+      We prove that there exist a maximum number of edges a graph may have by deriving first a formula.\\[0.25in]
+      Assume a connected components $G^\prime$ in $G$. We can say the number of vertices in this connected component is $n^\prime$. Considering the question is asking for the maximum number of edges possible, we can consider back to the Handshaking Theorem, and introduce a unique handshake to each of the vertices with all other vertices. With this, we create a complete graph of $n^\prime$ vertices.\\[0.25in]
+      Now we know that for a connected component to contain the maximum number of edges possible, it must be a complete graph.\\[0.25in]
+      We prove now the number of vertices per component that yield the highest number of edges overall.\\[0.25in]
+      In $G^\prime$, we can have at most $n^\prime - 1$ degrees per vertex, assuming $n^\prime \geq 1$. Each vertex can be connected to every other vertex other than itself, then we derive $n^\prime (n^\prime - 1)$ for all possible edged. We exclude the duplicates by dividing by 2, leaving us with $e^\prime = \frac{n^\prime ( n^\prime - 1)}{2}$\\[0.25in]
+      In $G^{\prime\prime}$, we can use the same logic to derive $e^{\prime\prime} = \frac{n{\prime\prime}(n{\prime\prime} - 1)}{2}$\\[0.25in]
+      The maximum number of edges we can have in a disconnected graph $G$ is $e = \frac{(n-1)(n-2)}{2}$\\[0.25in]
+      Therefore, the following must be true:
+      \begin{align*}
+        e^\prime + e^{\prime\prime} &= e\\
+        \frac{n^\prime (n^\prime - 1)}{2} + \frac{n^{\prime\prime}(n^{\prime\prime}-1)}{2} &= \frac{(n-1)(n-2)}{2}\\
+      \end{align*}
+      \begin{center}
+        We can simplify $n^{\prime\prime} = n - n^\prime$, where
+      \end{center}
+      \begin{align*}
+        \frac{n^\prime(n^\prime-1)}{2} + \frac{(n-n^\prime)(n-n^\prime-1)}{2} &= \frac{(n-1)(n-2)}{2}\\
+      \end{align*}
+      \begin{center}
+        expand both sides and simplify
+      \end{center}
+      \begin{align*}
+        \frac{2(n^\prime)^2 + n^2 - 2n^\prime n - n}{2} = \frac{n^2 - 2n - n + 2}{2}
+      \end{align*}
+      \begin{center}
+        discard redundant components, leaving us with
+      \end{center}
+      \begin{align*}
+        -2n^\prime n + 2(n^\prime)^2 &= -2n + 2\\
+        2(-n^\prime n + (n^\prime)^2) &= 2(-n+1)\\
+        -n^\prime n + (n^\prime)^2 &= -n + 1\\
+      \end{align*}
+      \begin{center}
+        We must find values $n^\prime$ that satisfy this statement
+      \end{center}
+      \begin{align*}
+        -n^\prime n + (n^\prime)^2 + n - 1 &= 0\\
+        (n^\prime)^2 - n^\prime n + n^\prime - n^\prime + n - 1 &= 0\\
+        (n^\prime - 1)(n^\prime - n + 1) &= 0\\[0.25in]
+      \end{align*}
+      The only values of $n^\prime$ that achieves this equality are $n^\prime = 1$ and $n^\prime = n - 1$, proving that for $G$ to contain the maximum number of edges but remain disconnected. It must contain 2 different components where one must contain 1 vertex and other must contain $n-1$ vertices $\hfill \blacksquare$
+    \item What is the minimum number of edges $G$ can have and be connected? Prove it.\\[0.25in]
+    For a connected graph $G$ to contain a minimum number of edges between vertices n, it must be interpreted as a single line where each of the endpoints connect to only one single vertex. The formula is $e = n - 1$, for $e$ the minimum edges for $n$ vertices.\\[0.25in]
+    We prove by contradition that there exist no smaller number of edges for $n$ number of vertices\\[0.25in]
+    Assume $e = n-k$, where $k \in \mathbb{Z}$ and $k > 1$\\
+    Assume $G$ is a graph where its endpoints are connected to one other vertex\\[0.25in]
+    A connected graph must satisfy the following condition: you may traverse from vertex $u$ to $v$ for any $u$, $v \in G$.\\
+    Assume vertex $u$, $v$, $z \in G$, where $v$ is connected to both $u$ and $v$. An increase in $k$ removes one of the edges in $G$ such that $u$, $v \in G^\prime$ and $z \in G^{\prime\prime}$. By our definition of a conncted graph, now there exist no path from $z$ to $v$ or $z$ to $u$, rendering it a disconnected graph.\\[0.25in]
+    We prove by contradiction that there exists no connceted graph with less edges $e$ than $n-1$, or $e = n-1$ $\hfill\blacksquare$
+    \end{enumerate}
+  \end{enumerate}
 \end{document}
