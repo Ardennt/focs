@@ -1,0 +1,47 @@
+[11/08/2022]
+
+10-07 Recursion, Well-Defined Function,
+      Unfolding the Recusion
+
+10-11 Recurrences,
+      Recursive Sets
+      -- basis, constructor, minimality
+
+10-14 Structural Induction
+      -- show that the property is preserved
+         for each constructor
+
+10-18 Proofs w Recursive Objects, RBTs
+      -- structural induction...
+      -- use contradiction to show every
+          element (e.g., palindrome) is in the set
+
+10-21 Sums, Asymptotics -- (e.g., maximum substring sum)
+      -- categorizing runtimes, ideally using Big-Theta
+
+10-25 Asymptotics, Divisibility, GCD,
+      Euclid's Algorithm, Bezout's Identity
+
+10-28 Graphs, Degree Sequence, Handshaking Theorem,
+      Graph Patterns (K, L, C, S, W), Connectivity,
+      Paths, Isomorphism, (Induced) Subgraphs, Cycles
+
+11-01 Cryptography, Modular Arithmetic, (RSA)
+
+11-04 Graphs, Graph Representation, Trees, Spanning Trees,
+      Structural Induction, Graph Proofs...
+
+
+Problem 10.13(c)...
+
+e.g., gcd(3,6)=3   m=3   n=6
+
+       mx+ny=3   3x+6y=3   x+2y=1
+
+            x=-1  y=1
+
+
+       ax+by=1    -a+b=1
+
+(remember that d is the GREATEST common divisor, so there
+ is are smaller divisors, one of which is always 1)
