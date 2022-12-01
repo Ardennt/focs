@@ -5,27 +5,106 @@
 
 \begin{document}
     \noindent \textbf{*Problem 13.42: To determine if a graph G with 50 vertices is 3-colorable, you test all possible 3-colorings. Your computer checks a million 3-colorings per second. Estimate how long it is going to take, in the worst case.}
-    \\ Test all possible 3-color: permutations
-    \\ total number (n) = number of vertices = 50
-    \\ selected colors (k) = 3
-
+    \\ Test all 50 vertices with 3 colors:
+    \\ By sum and product law, we know that the number of subsequent choices aren't affected by the previous, we can conclude that each vertices will have 3 possible choices. All possible 3-colorings are calculated by $3^{50}$
+    \\ Given that the computer checks a million 3-colorings per second, we can calculate:
     \begin{align*}
-        P &= \frac{n!}{(n-r)!}\\
-        &= \frac{50!}{(50-3)!}\\
-        &= \frac{50!}{47!}\\
-        &= 50 \times 49 \times 48\\
-        &= 11760
+        T &= \frac{3^{50}}{10^7}\\
+        & \approx 7.179 \times 10^{16}
     \end{align*}
-
-    The number of possible 3-colorings is 11760, calculating a million per second:
-
-    \begin{align*}
-        T &= \frac{11760}{1000000}\\
-        &= 0.01176
-    \end{align*}
-
-    The worst case, it will take \boxed{\textbf{\LARGE 0.01176s}}
-    \\[0.25in]
+    \noindent This means that all possible 3 colorings can be calculated in about {\LARGE $\boxed{\mathbf{7.179 \times 10^{16}}}$} seconds.
+    
+    \noindent\\[0.25in]
     \noindent \textbf{*Problem 13.50. How many 7-digit phone-numbers are non-decreasing (each digit is not less than the previous one.)}
-    \\ start with 9: we only have 1 possibility
+    \\ For 10 total numbers, 
+    
+    \noindent\\[0.25in]
+    \noindent \textbf{*Problem 14.15(b-c). Consider the binary strings consisting of 10 bits.}
+    \begin{enumerate}[label=(\alph*)]
+        \item \textbf{How many contain (i) 5 or more consecutive 1’s (ii) 5 or more consecutive 0’s?}
+        \begin{enumerate}[label=(\roman*)]
+            \item 5 or more consecutive 1's
+            \\ For a string of 5 bits, we have 6 possible start locations to begin placing 1's to make 
+            sure that we reach 5 consecutive 1's. For all 6, you can only choose 1 number = 1. For the 
+            remaining 4 options, we can choose 2 numbers.
+            \\ There are $\mathbf{6 \times 2^4}$ possible binary strings consisting of 10 bits that contain 5 
+            or more consecutive 1's.
+            \item 5 or more consecutive 0's
+            \\ following the same logic, we can deduct this is the same, at $\mathbf{6 \times 2^4}$
+            possible binary strings.
+        \end{enumerate}
+        \item \textbf{How many contain 5 or more consecutive 0’s or 5 or more consecutive 1’s?}
+        \\ For every binary string that have 5 or more consecutive 1's, just replace those with 0's
+        to achieve {\LARGE $\boxed{\mathbf{2 \times 6 \times 2^4}}$} possibilities.
+    \end{enumerate}
+
+    \noindent\\[0.25in]
+    \noindent \textbf{*Problem 14.34. Consider all permutations of \{1, 2, 3, 4, 5, 6\}. A permutation is good if any of the sub-sequences 12, 23, or 56 appear. How many good permutations are there?}
+    \\ Let us create subsets like such:
+    \begin{verbatim}
+        1. {{1, 2}, 3, 4, 5, 6} subsequence 1,2 appear
+        2. {1, {2, 3}, 4, 5, 6} subsequence 2,3 appear
+        3. {1, 2, 3, 4, {5, 6}} subsequence 5,6 appear
+        4. {{1, 2, 3}, 4, 5, 6} subsequence 1,2 and 2,3 appear
+        5. {{1, 2}, 3, 4, {5, 6}} subsequence 1,2 and 5,6 appear
+        6. {1, {2, 3}, 4, {5, 6}} subsequence 2,3 and 5,6 appear
+        7. {{1, 2, 3}, 4, {5, 6}} all subsequence appear
+    \end{verbatim}
+    \begin{enumerate}[label=1-3: ]
+        \item Total number of subsequences that appears, with duplicated = $3 \times 5!$
+    \end{enumerate}
+    \begin{enumerate}[label=4-6: ]
+        \item Number that 2 sequences appear = $4!$, total of $3 \times 4!$
+    \end{enumerate}
+    \begin{enumerate}[label=7: ]
+        \item Number that all sequences appear = $3!$
+    \end{enumerate}
+    We can get rid of subset 4-6 by subtracting, but for subset 7, since all sequences appear, we have to remove it from 2 subsets:
+    \begin{align*}
+        3 \times 5! - 3 \times 4! - 2 \times 3! = 276
+    \end{align*}
+    There are {\LARGE $\boxed{\mathbf{276}}$} possible permutations that contains 12, 23, or 56.
+
+    \noindent\\[0.25in]
+    \noindent\textbf{*Problem 14.63(g). Here are some counting problems on graphs to challenge you.}
+    \begin{enumerate}[label=(g)]
+        \item \textbf{How many Hamiltonian cycles are in $K_{n,n}$? [Hint: a Hamiltonian cycle is a cycle on
+        graph $G = (V, E)$ that starts and ends at vertex $v_0\;\epsilon\;V$ , visiting each vertex in set
+        $V-\{v_0\}$ (i.e., all other vertices) exactly once.]}
+    \end{enumerate}
+
+    \noindent\\[0.25in]
+    \noindent\textbf{*Problem 15.12. Roll a 6-sided die 5 times. What is the probability: (a) some number repeats (b) you get no sixes?}
+    \begin{enumerate}[label=(\alph*)]
+        \item some number repeats
+        \\ Total number of combinations when rolling a die 5 times = $6^5$
+        \\ A die is rolled 5 times, for a number to repeat, you need two rolls to be the same number, we can choose any of the 6 numbers to be that number that repeats = $(1\times1)\times6$
+        \\ For the rest of the 3 numbers, we have 6 possibilities of what they can be = $6^3$
+        \\ Multiplied together, we get $(1\times1)\times6\times6^3$ = $6^4$
+        \\ Probabilities of rolling a 6 sided die 5 times and ending with a repeated number = {\LARGE $\boxed{\mathbf{\frac{6^4}{6^5}}}$}
+        \item no sixes
+        \\ Total number of combinations stay the same at $6^5$
+        \\ 6 is eliminated, only 5 possible numbers are left to choose from = $5^4$
+        \\ Probabilities of rolling a 6 sided die 5 times and ending with a repeated number and having no 6's = {\LARGE $\boxed{\mathbf{\frac{5^4}{6^5}}}$}
+    \end{enumerate}
+
+    \noindent\\[0.25in]
+    \noindent\textbf{*Problem 24.11(f,h,w). Give DFAs for the following languages, a.k.a., computing problems.}
+    \begin{enumerate}[label=(\alph*)]
+        \setcounter{enumi}{5}
+        \item $\mathbf{\mathcal{L}=\{1^{\bullet 2n}01^{\bullet 2k+1}\ |\ n,k\ge 0\}}$.
+        \setcounter{enumi}{7}
+        \item \textbf{Strings which begin with 10 and end with 01.}
+        \setcounter{enumi}{22}
+        \item \textbf{Strings whose length is divisible by 3.}
+    \end{enumerate}
+
+    \noindent\\[0.25in]
+    \noindent\textbf{*Problem 25.7 Give a DFA and a CFG for each problem.}
+    \begin{enumerate}[label=(\alph*)]
+        \item $\mathbf{\mathcal{L}=\{01^{\bullet n}\ |\ n\ge 0\}}$
+        \item $\mathbf{\mathcal{L}=\{0^{\bullet n}1^{\bullet n}\ |\ 0\le n\le 5\}}$
+        \item $\mathbf{\mathcal{L}=\{}$ \textbf{strings which end in a 1} $\mathbf{\}}$
+    \end{enumerate}
+
 \end{document}
