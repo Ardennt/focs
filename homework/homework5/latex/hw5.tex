@@ -1,7 +1,31 @@
 \documentclass{article}
 \usepackage[margin=1.25in]{geometry}
 \usepackage{amsmath, amssymb, setspace, enumerate, enumitem}
+\onehalfspacing
 
 \begin{document}
-    hi
+    \noindent \textbf{*Problem 13.42: To determine if a graph G with 50 vertices is 3-colorable, you test all possible 3-colorings. Your computer checks a million 3-colorings per second. Estimate how long it is going to take, in the worst case.}
+    \\ Test all possible 3-color: permutations
+    \\ total number (n) = number of vertices = 50
+    \\ selected colors (k) = 3
+
+    \begin{align*}
+        P &= \frac{n!}{(n-r)!}\\
+        &= \frac{50!}{(50-3)!}\\
+        &= \frac{50!}{47!}\\
+        &= 50 \times 49 \times 48\\
+        &= 11760
+    \end{align*}
+
+    The number of possible 3-colorings is 11760, calculating a million per second:
+
+    \begin{align*}
+        T &= \frac{11760}{1000000}\\
+        &= 0.01176
+    \end{align*}
+
+    The worst case, it will take \boxed{\textbf{\LARGE 0.01176s}}
+    \\[0.25in]
+    \noindent \textbf{*Problem 13.50. How many 7-digit phone-numbers are non-decreasing (each digit is not less than the previous one.)}
+    
 \end{document}
