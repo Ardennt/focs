@@ -44,8 +44,8 @@
         \end{enumerate}
         \item \textbf{How many contain 5 or more consecutive 0’s or 5 or more consecutive 1’s?}
         For every binary string that have 5 or more consecutive 1's, just replace those with 0's
-        to achieve $2 \times 6 \times 2^4$ possibilities. There are two possibilities that are double
-        counted: 1111100000 and 0000011111 = {\LARGE $\boxed{\mathbf{2 \times 6 \times 2^4 - 2}}$}
+        to achieve $2 \times 112$ possibilities. There are two possibilities that are double
+        counted: 1111100000 and 0000011111 = {\LARGE $\boxed{\mathbf{2 \times 112 - 2}}$}
     \end{enumerate}
 
     \noindent\\[0.25in]
@@ -69,11 +69,11 @@
     \begin{enumerate}[label=7: ]
         \item Number that all sequences appear = $3!$
     \end{enumerate}
-    We can get rid of subset 4-6 by subtracting, but for subset 7, since all sequences appear, we have to remove it from 2 subsets:
+    We can get rid of subset 4-6 by subtracting, but for subset 7, since all sequences appear, we removed it before so we have to add it back.
     \begin{align*}
-        3 \times 5! - 3 \times 4! - 2 \times 3! = 276
+        3 \times 5! - 3 \times 4! + 3! = 294
     \end{align*}
-    There are {\LARGE $\boxed{\mathbf{276}}$} possible permutations that contains 12, 23, or 56.
+    There are {\LARGE $\boxed{\mathbf{294}}$} possible permutations that contains 12, 23, or 56.
 
     \noindent\\[0.25in]
     \noindent\textbf{*Problem 14.63(g). Here are some counting problems on graphs to challenge you.}
@@ -92,14 +92,20 @@
     \begin{enumerate}[label=(\alph*)]
         \item some number repeats
         \\ Total number of combinations when rolling a die 5 times = $6^5$
-        \\ A die is rolled 5 times, for a number to repeat, you need two rolls to be the same number, we can choose any of the 6 numbers to be that number that repeats = $(1\times1)\times6$
-        \\ For the rest of the 3 numbers, we have 6 possibilities of what they can be = $6^3$
-        \\ Multiplied together, we get $(1\times1)\times6\times6^3$ = $6^4$. Considering that they don't have to be consecutive, the second roll can be in any of the 4 other spots. To achieve this, multiply by 4 = $6^4 \times 4$
-        \\ Probabilities of rolling a 6 sided die 5 times and ending with a repeated number = {\LARGE $\boxed{\mathbf{\frac{6^4 \times 4}{6^5}}}$} or a 66.67\% chance.
+        \\ For a number not to repeat, for each roll, the number of possibilities after is one less. To achieve 5 rolls without any repeated the numbers, the product would be $6 \times 5 \times 4 \times 3 \times 2$, or $6!$.
+        \\ To solve this, we can remove the total number of rows without a repeated number from the total combinations, leaving us with $6^5 - 6!$. To get the probability, we can divide it by the total:
+        \begin{align*}
+            \frac{6^5 - 6!}{6^5} = 0.907
+        \end{align*}
+        Probabilities of rolling a 6 sided die 5 times and some number repeats = {\LARGE $\boxed{\mathbf{90.7\%}}$}
+        % \\ A die is rolled 5 times, for a number to repeat, you need two rolls to be the same number, we can choose any of the 6 numbers to be that number that repeats = $(1\times1)\times6$
+        % \\ For the rest of the 3 numbers, we have 6 possibilities of what they can be = $6^3$
+        % \\ Multiplied together, we get $(1\times1)\times6\times6^3$ = $6^4$. Considering that they don't have to be consecutive, the second roll can be in any of the 4 other spots. To achieve this, multiply by 4 = $6^4 \times 4$
+        
         \item no sixes
         \\ Total number of combinations stay the same at $6^5$
         \\ 6 is eliminated, only 5 possible numbers are left to choose from = $5^5$
-        \\ Probabilities of rolling a 6 sided die 5 times and having no 6's = {\LARGE $\boxed{\mathbf{\frac{5^5}{6^5}}}$} or 40.19\% chance.
+        \\ Probabilities of rolling a 6 sided die 5 times and having no 6's = {\large $\frac{5^5}{6^5}$} or {\LARGE $\boxed{\mathbf{40.2\%}}$}
     \end{enumerate}
 
     \noindent\\[0.25in]
