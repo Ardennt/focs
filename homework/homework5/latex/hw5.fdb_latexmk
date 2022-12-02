@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1669933259 "c:/Users/ardennt/Documents/CS/focs/homework/homework5/latex/hw5.tex" "hw5.pdf" "hw5" 1669933260
+["pdflatex"] 1669953330 "c:/Users/ardennt/Documents/CS/focs/homework/homework5/latex/hw5.tex" "hw5.pdf" "hw5" 1669953331
   "C:/Users/ardennt/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1666801636 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/ardennt/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1663276254 10773107 cb191ebd97441df48cbcb8022a0bad00 ""
   "D:/HDD Apps/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -28,6 +28,7 @@
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247593067 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247593067 36281 c355509802a035cadc5f15869451dcee ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247593067 35752 024fb6c41858982481f6968b5fc26508 ""
+  "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247593066 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247593067 32762 7fee39e011c23b3589931effd97b9702 ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247593066 32716 08e384dc442464e7285e891af9f45947 ""
@@ -53,9 +54,9 @@
   "D:/HDD Apps/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1661881568 30282 33c465a64f2bd5ad4a68a7b2f555a29b ""
   "D:/HDD Apps/MiKTeX/tex/latex/setspace/setspace.sty" 1324294077 22913 a27d7908fc6f0385466454a966a316eb ""
   "D:/HDD Apps/MiKTeX/tex/latex/tools/enumerate.sty" 1636710260 3468 068d84ef9735e15f11c5a120c0a1a139 ""
-  "c:/Users/ardennt/Documents/CS/focs/homework/homework5/latex/hw5.tex" 1669933258 6434 585b41f99fa2e69e77742b719ea9e96e ""
-  "hw5.aux" 1669933259 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "hw5.tex" 1669933258 6434 585b41f99fa2e69e77742b719ea9e96e ""
+  "c:/Users/ardennt/Documents/CS/focs/homework/homework5/latex/hw5.tex" 1669953330 7845 eb0f9616876b9694e55d40bc129961b7 ""
+  "hw5.aux" 1669953331 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "hw5.tex" 1669953330 7845 eb0f9616876b9694e55d40bc129961b7 ""
   (generated)
   "hw5.aux"
   "hw5.log"

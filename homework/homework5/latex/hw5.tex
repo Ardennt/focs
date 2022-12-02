@@ -25,17 +25,27 @@
         \begin{enumerate}[label=(\roman*)]
             \item 5 or more consecutive 1's
             \\ For a string of 5 bits, we have 6 possible start locations to begin placing 1's to make 
-            sure that we reach 5 consecutive 1's. For all 6, you can only choose 1 number = 1. For the 
-            remaining 4 options, we can choose 2 numbers.
-            \\ There are $\mathbf{6 \times 2^4}$ possible binary strings consisting of 10 bits that contain 5 
-            or more consecutive 1's.
+            sure that we reach 5 consecutive 1's. For the remaining 5 numbers, we have 2 options, represented
+            by:
+            \begin{verbatim}
+                { {1, 1, 1, 1, 1}, x, x, x, x, x}
+                x = dont care
+            \end{verbatim}
+            There are $6 \times 2^5$ choices for this subset. A double counting issue such as this arises:
+            \begin{verbatim}
+                { x {1, 1, 1, 1, 1}, x, x, x, x}
+            \end{verbatim}
+            where this subset can produce the same string as the one above.\\
+            Given that there are 5 different "dont cares", we can restrict each of them, leaving the other 4 free to have all the repeated, forming the equation $2^4 \times 5$\\
+            Removing them from our original subset, we get $6 \times 2^5 - 5 \times 2^4$ = {\LARGE $\boxed{\mathbf{112}}$}
             \item 5 or more consecutive 0's
-            \\ following the same logic, we can deduct this is the same, at $\mathbf{6 \times 2^4}$
+            \\ following the same logic, we can deduct this is the same, at {\LARGE $\boxed{\mathbf{112}}$}
             possible binary strings.
         \end{enumerate}
         \item \textbf{How many contain 5 or more consecutive 0’s or 5 or more consecutive 1’s?}
-        \\ For every binary string that have 5 or more consecutive 1's, just replace those with 0's
-        to achieve {\LARGE $\boxed{\mathbf{2 \times 6 \times 2^4}}$} possibilities.
+        For every binary string that have 5 or more consecutive 1's, just replace those with 0's
+        to achieve $2 \times 6 \times 2^4$ possibilities. There are two possibilities that are double
+        counted: 1111100000 and 0000011111 = {\LARGE $\boxed{\mathbf{2 \times 6 \times 2^4 - 2}}$}
     \end{enumerate}
 
     \noindent\\[0.25in]
@@ -71,6 +81,10 @@
         \item \textbf{How many Hamiltonian cycles are in $K_{n,n}$? [Hint: a Hamiltonian cycle is a cycle on
         graph $G = (V, E)$ that starts and ends at vertex $v_0\;\epsilon\;V$ , visiting each vertex in set
         $V-\{v_0\}$ (i.e., all other vertices) exactly once.]}
+        \\ There are n vertices on each side. If I start from the left side, I can choose $n$ vertices on the right side.
+        After choosing from the right side, I have $n-1$ vertices to choose from the left side, and so on. If I have n = 4, the
+        possibilities sequence will go from \{4, 3, 3, 2, 2, 1, 1, 1\}, starting from any vertex. Each vertex has $n \times ((n-1)!)^2$
+        possibility of hamiltonian cycles. For a bipartite graph $K_{n,n}$, there are $2n$ total vertices. There is a total of {\LARGE $\boxed{\mathbf{2n(n\times((n-1)!)^2)}}$} possibilities.
     \end{enumerate}
 
     \noindent\\[0.25in]
@@ -80,12 +94,12 @@
         \\ Total number of combinations when rolling a die 5 times = $6^5$
         \\ A die is rolled 5 times, for a number to repeat, you need two rolls to be the same number, we can choose any of the 6 numbers to be that number that repeats = $(1\times1)\times6$
         \\ For the rest of the 3 numbers, we have 6 possibilities of what they can be = $6^3$
-        \\ Multiplied together, we get $(1\times1)\times6\times6^3$ = $6^4$
-        \\ Probabilities of rolling a 6 sided die 5 times and ending with a repeated number = {\LARGE $\boxed{\mathbf{\frac{6^4}{6^5}}}$}
+        \\ Multiplied together, we get $(1\times1)\times6\times6^3$ = $6^4$. Considering that they don't have to be consecutive, the second roll can be in any of the 4 other spots. To achieve this, multiply by 4 = $6^4 \times 4$
+        \\ Probabilities of rolling a 6 sided die 5 times and ending with a repeated number = {\LARGE $\boxed{\mathbf{\frac{6^4 \times 4}{6^5}}}$} or a 66.67\% chance.
         \item no sixes
         \\ Total number of combinations stay the same at $6^5$
-        \\ 6 is eliminated, only 5 possible numbers are left to choose from = $5^4$
-        \\ Probabilities of rolling a 6 sided die 5 times and ending with a repeated number and having no 6's = {\LARGE $\boxed{\mathbf{\frac{5^4}{6^5}}}$}
+        \\ 6 is eliminated, only 5 possible numbers are left to choose from = $5^5$
+        \\ Probabilities of rolling a 6 sided die 5 times and having no 6's = {\LARGE $\boxed{\mathbf{\frac{5^5}{6^5}}}$} or 40.19\% chance.
     \end{enumerate}
 
     \noindent\\[0.25in]
