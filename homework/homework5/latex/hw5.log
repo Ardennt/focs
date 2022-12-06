@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.15)  6 DEC 2022 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.15)  6 DEC 2022 18:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -457,19 +457,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/ardennt/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 62.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 63.
  (D:\HDD Apps\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 62.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
  [2] [3] [4]
 <p25_7b.jpg, id=33, 467.7475pt x 563.10374pt>
 File: p25_7b.jpg Graphic file (type jpg)
 <use p25_7b.jpg>
-Package pdftex.def Info: p25_7b.jpg  used on input line 194.
+Package pdftex.def Info: p25_7b.jpg  used on input line 195.
 (pdftex.def)             Requested size: 233.87317pt x 281.55118pt.
  [5 <./p25_7b.jpg>] (hw5.aux) ) 
 Here is how much of TeX's memory you used:
@@ -481,7 +481,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  100i,9n,104p,490b,972s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/HDD Apps/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on hw5.pdf (5 pages, 322077 bytes).
+Output written on hw5.pdf (5 pages, 322076 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
