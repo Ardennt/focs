@@ -1,6 +1,8 @@
 \documentclass{article}
 \usepackage[margin=1.25in]{geometry}
 \usepackage{amsmath, amssymb, setspace, enumerate, enumitem}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning, arrows}
 \onehalfspacing
 
 \begin{document}
@@ -16,8 +18,9 @@
     
     \noindent\\[0.25in]
     \noindent \textbf{*Problem 13.50. How many 7-digit phone-numbers are non-decreasing (each digit is not less than the previous one.)}
-    \\ For 10 total numbers, 
-    
+    \\ For this problems, we can think of it as choosing 7 random number out of a bucket, each number is placed 7 times, so there is a possible of a single number being chosen
+    7 times. We can think of it as this 10 containers and we have 7 items to place in 10 different containers. Since we have 10 different containers for the 7 items, we can select 
+    k = 7 numbers from r = 10 containers. With this, we can derive the k-subset formula with repetition equal to ${10 + 7 - 1 \choose 10 - 1}$ = {\LARGE $\boxed{\mathbf{16 \choose 9}}$}
     \noindent\\[0.25in]
     \noindent \textbf{*Problem 14.15(b-c). Consider the binary strings consisting of 10 bits.}
     \begin{enumerate}[label=(\alph*)]
@@ -114,6 +117,20 @@
         \setcounter{enumi}{5}
         \item $\mathbf{\mathcal{L}=\{1^{\bullet 2n}01^{\bullet 2k+1}\ |\ n,k\ge 0\}}$.
         \setcounter{enumi}{7}
+        \begin{center}
+            \begin{tikzpicture}
+                \node[state, initial] (q0) {$q_0$};
+                \node[state, below of=q0] (q1) {$q_2$};
+                (q0) edge[above] node{0} (q1);
+                % \node[state, accepting, right of=q1] (q2) {$q_2$};
+                % \node[state, right of=q2] (q3) {$q_3$};
+                % \draw (q1) edge[loop above] node{0} (q1)
+                % (q1) edge[above] node{1} (q2)
+                % (q2) edge[loop above] node{1} (q2)
+                % (q2) edge[bend left, above] node{0} (q3)
+                % (q3) edge[bend left, below] node{0, 1} (q2);
+            \end{tikzpicture}
+    \end{center}
         \item \textbf{Strings which begin with 10 and end with 01.}
         \setcounter{enumi}{22}
         \item \textbf{Strings whose length is divisible by 3.}
