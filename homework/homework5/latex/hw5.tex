@@ -3,6 +3,13 @@
 \usepackage{amsmath, amssymb, setspace, enumerate, enumitem}
 \usepackage{tikz}
 \usetikzlibrary{automata, positioning, arrows}
+\tikzset{
+->, % makes the edges directed
+>=stealth', % makes the arrow heads bold
+node distance=3cm, % specifies the minimum distance between two nodes. Change if necessary.
+every state/.style={thick, fill=gray!10}, % sets the properties for each ’state’ node
+}
+\usepackage{graphicx}
 \onehalfspacing
 
 \begin{document}
@@ -120,28 +127,94 @@
         \begin{center}
             \begin{tikzpicture}
                 \node[state, initial] (q0) {$q_0$};
-                \node[state, below of=q0] (q1) {$q_2$};
-                (q0) edge[above] node{0} (q1);
-                % \node[state, accepting, right of=q1] (q2) {$q_2$};
-                % \node[state, right of=q2] (q3) {$q_3$};
-                % \draw (q1) edge[loop above] node{0} (q1)
-                % (q1) edge[above] node{1} (q2)
-                % (q2) edge[loop above] node{1} (q2)
-                % (q2) edge[bend left, above] node{0} (q3)
-                % (q3) edge[bend left, below] node{0, 1} (q2);
+                \node[state, below of=q0] (q1) {$q_1$};
+                \node[state, right of=q0] (q2) {$q_2$};
+                \node[state, below of=q2, accepting] (q3) {$q_3$};
+                \draw (q0) edge[above] node{0} (q2);
+                \draw (q0) edge[below, bend right, left=0.3] node{1} (q1);
+                \draw (q1) edge[above, bend right, right=0.3] node{1} (q0);
+                \draw (q2) edge[below, bend right, left=0.3] node{1} (q3);
+                \draw (q3) edge[above, bend right, right=0.3] node{1} (q2);
             \end{tikzpicture}
-    \end{center}
+        \end{center}
         \item \textbf{Strings which begin with 10 and end with 01.}
         \setcounter{enumi}{22}
+        \begin{center}
+            \begin{tikzpicture}
+                \node[state, initial] (q0) {$q_0$};
+                \node[state, right of=q0] (q1) {$q_1$};
+                \node[state, below of=q1] (q2) {$q_2$};
+                \node[state, left of=q2, accepting] (q3) {$q_3$};
+                \node[state, below of=q3] (q4) {$q_4$};
+
+                \draw (q0) edge[above] node{1} (q1);
+                \draw (q1) edge[right] node{0} (q2);
+                \draw (q2) edge[loop right] node{0} (q2);
+                \draw (q2) edge[above, bend right] node{1} (q3);
+                \draw (q3) edge[right] node{1} (q4);
+                \draw (q4) edge[loop left] node{1} (q4);
+                \draw (q4) edge[below] node{0} (q2);
+                \draw (q3) edge[above, bend right] node{0} (q2);
+            \end{tikzpicture}
+        \end{center}
         \item \textbf{Strings whose length is divisible by 3.}
+        \begin{center}
+            \begin{tikzpicture}
+                \node[state, initial, accepting] (q0) {$q_0$};
+                \node[state, right of=q0] (q1) {$q_1$};
+                \node[state] at (1.5, -2) (q2) {$q_2$};
+
+                \draw (q0) edge[above] node{0,1} (q1);
+                \draw (q1) edge[right] node{0,1} (q2);
+                \draw (q2) edge[left] node{0,1} (q0);
+            \end{tikzpicture}
+        \end{center}
     \end{enumerate}
 
     \noindent\\[0.25in]
     \noindent\textbf{*Problem 25.7 Give a DFA and a CFG for each problem.}
     \begin{enumerate}[label=(\alph*)]
         \item $\mathbf{\mathcal{L}=\{01^{\bullet n}\ |\ n\ge 0\}}$
+        \begin{center}
+            \begin{tikzpicture}
+                \node[state, initial] (q0) {$q_0$};
+                \node[state, right of=q0, accepting] (q1) {$q_1$};
+
+                \draw (q0) edge[above] node{0} (q1);
+                \draw (q1) edge[loop right] node{1} (q1);
+            \end{tikzpicture}
+
+            \begin{tabular}{l l}
+                $S \rightarrow$ & $0$ $|$ $ST_1$\\
+                $T_1 \rightarrow$ & $1$
+            \end{tabular}
+        \end{center}
         \item $\mathbf{\mathcal{L}=\{0^{\bullet n}1^{\bullet n}\ |\ 0\le n\le 5\}}$
+        \begin{center}
+            \includegraphics[scale=0.5]{p25_7b.jpg}
+
+            \begin{tabular}{l l}
+                $S \rightarrow$ & $\epsilon$ $|$ $01$ $|$ $0011$ $|$ $000111$ $|$ $00001111$ $|$ $0000011111$\\
+            \end{tabular}
+        \end{center}
         \item $\mathbf{\mathcal{L}=\{}$ \textbf{strings which end in a 1} $\mathbf{\}}$
+        \begin{center}
+            \begin{tikzpicture}
+                \node[state, initial] (q0) {$q_0$};
+                \node[state, right of=q0, accepting] (q1) {$q_1$};
+
+                \draw (q0) edge[loop above] node{0} (q0);
+                \draw (q0) edge[above, bend left] node{1} (q1);
+                \draw (q1) edge[below, bend left] node{0} (q0);
+                \draw (q1) edge[loop above] node{1} (q1);
+            \end{tikzpicture}
+
+            \begin{tabular}{l l}
+                $S \rightarrow$ & $1$ $|$ $T_0S$ $|$ $T_1S$\\
+                $T_0 \rightarrow$ & $0$ \\
+                $T_1 \rightarrow$ & $1$
+            \end{tabular}
+        \end{center}
     \end{enumerate}
 
 \end{document}
